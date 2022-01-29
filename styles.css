@@ -15,6 +15,7 @@ html{font-size: 125%; line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-si
     /* Colors */
     --color-background: #f9f9f9;
     --color-background-secondary: #fff;
+    --color-background-tertiary: #111111;
     --color-secondary: #0dd97e;
 }
 
@@ -114,7 +115,7 @@ header {
 }
 
 .sidebar {
-    background-color: black;
+    background-color: var(--color-background-tertiary);
     height: 100%;
     display: flex;
     align-items: center;
