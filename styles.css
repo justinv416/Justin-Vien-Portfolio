@@ -222,6 +222,69 @@ h3 {
     font-family: var(--font-heading);
 }
 
+.projects .wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+}
+
+.projectDetailsContainer {
+    /* background-color: mediumslateblue; */
+    width: 50%;
+    padding: 10%;
+    line-height: 35px; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.projectDetails {
+    /* background-color: mediumvioletred; */
+}
+
+.projectDetails i {
+    font-size: 1.8rem;
+}
+
+.projectImage {
+    width: 100%;
+}
+
+.projectDescriptionContainer i {
+    font-size: 2rem;
+}
+
+.projectImageContainer {
+    /* background-color: mediumspringgreen; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.projectsSlider {
+    background-color: var(--color-background-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.projectsSlider p {
+    color: var(--color-background);
+}
+
+.projectsSlider i {
+    color: var(--color-background);
+    padding: 20px;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.projectsSlider i:hover, 
+.projectsSlider i:focus {
+    color: var(--color-secondary);
+}
 /* .dot {
     background-color: grey;
     width: 10px;
@@ -231,6 +294,17 @@ h3 {
 .sidebar p {
     color: white;
     transform: rotate(90deg);
+}
+
+.step {
+    padding-left: 10px;
+    position: relative;
+}
+
+.line {
+    height: 1px;
+    background-color: var(--color-background);
+    width: 50%;
 }
 
 footer {
