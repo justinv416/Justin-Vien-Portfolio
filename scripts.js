@@ -4,4 +4,17 @@ let titleAnimation = anime({
     opacity: [0, 1],
 })
 
-console.log('adfasdfa')
+
+const projects = [];
+
+const project = {
+    name: "JS Hero",
+    description: "A simple javascript quiz game.",
+    image: "./assets/JS-Hero.png"
+}
+
+const displayProject = () => {
+    document.querySelector('.projectHeading').textContent = project.name;
+}
+
+displayProject()
