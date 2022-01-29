@@ -31,7 +31,7 @@ a {
 nav {
     font-family: var(--font-body);
     width: 50%;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 nav ul {
@@ -55,6 +55,11 @@ h1 {
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 4rem;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-family: var(--font-heading);
 }
 
 h1 span {
@@ -65,17 +70,47 @@ p {
     font-family: var(--font-body);
 }
 
-.headingContainer {
-    background-color: violet;
+header {
+    height: 100vh;
 }
 
-/* header .wrapper {
+.headerContainer {
+    height: calc(90vh - 73px);
+    background-color: violet;
     display: flex;
     justify-content: space-between;
-} */
+    align-items: center;
+}
+
+.headingContainer {
+    background-color: wheat;
+    /* width: 30%; */
+    padding: 5%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.headingContainer p {
+    font-size: 1.3rem;
+}
 
 .slider {
     background-color: turquoise;
     width: 50%;
     height: 50vh;
+}
+
+.sidebar {
+    background-color: black;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar p {
+    color: white;
+    transform: rotate(90deg);
 }
