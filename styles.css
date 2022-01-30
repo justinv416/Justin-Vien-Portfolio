@@ -16,6 +16,7 @@ html{scroll-behavior:smooth; font-size: 125%; line-height:1.15;-ms-text-size-adj
     --color-background: #f9f9f9;
     --color-background-secondary: #fff;
     --color-background-tertiary: #111111;
+    --color-primary: #646464;
     --color-secondary: #0dd97e;
 }
 
@@ -112,15 +113,62 @@ header {
     align-items: center;
 }
 
+.linkToSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: wheat; */
+    width: 80%;
+    padding-top: 30px;
+}
+
+.headingContainer .linkToSection p {
+    color: var(--color-background-tertiary);
+}
+
 .headingContainer {
     /* background-color: lightcoral; */
-    /* width: 30%; */
-    padding: 5%;
-    margin: 0 0 3% 3% ;
+    width: 30%;
+    /* padding: 5%; */
+    margin: 0 0 3% 8%;
+}
+
+.headingContainer button, .skillsContent button {
+    background-color: var(--color-secondary);
+    border: none;
+    border-radius: 40px;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer;
+    position: relative;
+}
+
+.linkToSection .line {
+    height: 1px;
+    width: 25%;
+    background-color: var(--color-background-tertiary);
+}
+
+.headingContainer button:hover,
+.headingContainer button:focus {
+    background-color: var(--color-background);
+    outline: 3px solid var(--color-secondary);
+    /* border: none; */
+    border-radius: 40px;
+}
+
+.headingContainer i {
+    font-size: 2rem;
+    color: var(--color-background);
+    padding: 10px 25px;
+}
+
+.headingContainer i:hover {
+    color: var(--color-secondary);
 }
 
 .headingContainer p {
     font-size: 1.3rem;
+    color: var(--color-primary);
 }
 
 .sliderContainer {
@@ -417,13 +465,19 @@ h3 {
     color: var(--color-background);
 }
 
-.emailLink button, .linkedInLink button {
+.emailLink button, .linkedInLink button,
+.aboutMeContent button {
     padding: 20px 0;
     border: none;
     border-radius: 40px;
     width: 20%;
     background-color: var(--color-secondary);
     margin: 20px 0;
+}
+
+.aboutMeContent i {
+    color: var(--color-background);
+    font-size: 2rem;
 }
 
 footer {
@@ -492,51 +546,174 @@ footer ul li a {
     display: flex;
 }
 
+.btt {
+    color: var(--color-background);
+    font-family: var(--font-body);
+    text-align: center;
+    display: block;
+    padding-bottom: 50px;
+    transition: color 0.2s ease-in-out;
+}
 
-/* Mobile MQ */
-@media (max-width: 400px) {
-    header {
-        min-height: auto;
-    }
+.btt:hover, .btt:focus {
+    color: var(--color-secondary);
+}
+
+/* Tablet MQ */
+@media (max-width: 1000px) {
     
-    nav {
+    /* Containers & sections */
+    .headerContainer, .about, .projects, .projects .wrapper, 
+    .contact, .contact .wrapper {
+        height: auto;
+    }
+
+    .aboutMeContainer {
+        height: auto;
         width: 100%;
-        position: fixed;
-        left: 0;
-        padding: 0 10px;
-        background-color: var(--color-background);
-        z-index: 1;
     }
 
-    nav ul {
-        align-items: center;
-        padding: 20px 0;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    /* .opened {
-        display: flex;
-    } */
-
-    
-
-    .mobileNav li {
-        padding: 30px 0;
-        /* background-color: lightseagreen; */
-    }
-
-    .navLinks {
-        display: none;
+    .skillsContainer {
+        flex-direction: column;
     }
 
     .aboutWrapper {
         flex-direction: column-reverse;
     }
 
+    .projects .wrapper {
+        flex-direction: column;
+    }
+
+    .contact .wrapper {
+        flex-direction: column;
+    }
+
+    .projectImageContainer {
+        width: 100%;
+    }
+
+    .aboutMeContent {
+        width: 100%;
+        padding: 10% 0;
+    }
+
+    .aboutMeContent p {
+        padding: 50px 0;
+    }
+
+    .projectDetailsContainer {
+        width: 100%;
+        padding: 10% 0;
+    }
+
+    .skillsContent {
+        padding: 10% 0;
+    }
+
+     nav {
+        width: 100%;
+        position: fixed;
+        left: 0;
+        padding: 0 30px;
+        z-index: 1;
+    }
+
+      nav ul {
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .navMain {
+        padding: 20px 0;
+    }
+
     .headerContainer {
         flex-direction: column;
     }
+
+    .headingContainer {
+        margin: 10% 0 0 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .sliderContainer {
+        width: 75%;
+    }
+
+    .navLinks {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Mobile MQ */
+@media (max-width: 400px) {
+    header {
+        height: auto;
+    }
+
+    
+    .headingContainer {
+        margin: 20% auto;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    
+
+    .sliderContainer {
+        width: 100%;
+    }
+
+    
+
+    
+
+   
+    
+
+    .projectDetailsContainer {
+        width: 100%;
+    }
+
+    
+
+    .aboutMeContent h2 {
+        text-align: center;
+    }
+
+    
+
+    
+
+    .contactContent {
+        width: 100%;
+    }
+
+   
+
+  
+    
+
+    .navMain {
+        padding-top: 20px;
+    }
+
+    .mobileNav li {
+        padding: 30px 0;
+        /* background-color: lightseagreen; */
+    }
+
+    
+
+    
+
+    
 }

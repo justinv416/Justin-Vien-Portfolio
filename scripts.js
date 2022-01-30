@@ -112,10 +112,31 @@ const navControl = () => {
     })
 }
 
+// const navScrollPosition = () => {
+//     window.addEventListener('scroll', () => {
+//         if(this.scrollY > 0) {
+//             document.querySelector('nav').style.position= 'fixed';
+//         }
+//     })
+// } 
+
+//Changing the color of navbar if window is scrolled past initial position.
+// navApp.changeNavColor = function(){
+//     window.addEventListener('scroll', function(){
+//         const navigationMain = document.querySelector('.navigation');
+//         if(this.scrollY > 0) {
+//             navigationMain.classList.add('navigation__color');
+//         } else {
+//             navigationMain.classList.remove('navigation__color');
+//         };
+//     });
+// };
+
 const init = () => {
     // displayProject();
     sliderControls(0)
     navControl();
+    navScrollPosition();
 }
 
 init();
