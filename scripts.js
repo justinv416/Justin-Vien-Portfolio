@@ -9,7 +9,7 @@ const projects = [
     {
         name: "JS-Hero",
         description: `A quiz game that features a set of 14 javascript trivia questions.
-                    Upon a correct answer users will see a attack animation indicating the enemey is defeated,
+                    Upon a correct answer users will see a attack animation indicating the enemy is defeated,
                     and a respective take damage animation if the user gets the question wrong.
                     I designed the UI with inspiration from old final fantasy RPGs. `,
         image: "./assets/JS-Hero.png",
@@ -37,33 +37,68 @@ const projects = [
         source: "https://github.com/MarkAndJustin/ReelGoodFilms",
         liveLink: "https://reelgoodfilms.netlify.app/"
     },
+    {
+        name: "Creative",
+        description: `Creative is a multi-page website converted from a PSD file. 
+                    This website is fully responsive with mobile navigation, a fully functional image slider
+                    on the home page, and  the ability to allow users to write comments on the blog page.`,
+        image: "./assets/Creative.png",
+        stack: "This project was built with: HTML5, SASS, Vanilla JS",
+        source: "https://github.com/justinv416/Agency-Creative",
+        liveLink: "https://agency-creative.netlify.app/"
+    },
+    {
+        name: "Shoppable",
+        description: `Shoppable is a e-commerce site that allows users to shop for products. 
+                    This project features a dedicated product page, the ability for users to add and remove items 
+                    from a cart component which persists over sessions with the integration of firebase.`,
+        image: "./assets/Shoppable.png",            
+        stack: "This project was built with: React, CSS3, Firebase",
+        source: "https://github.com/justinv416/JustinVien-ProjectThree",
+        liveLink: "https://thebettershoppable.netlify.app/"
+    },
+    {
+        name: "Bite-Sized Travelling",
+        description: `Bite-Sized Travelling is a agency style group React project that allows users to create a trip. 
+                    On a separate page users can then search for a location or city and populate restaurants which they
+                    can then add to their itinerary. Users can also add notes on the restaurant and modify their trip by add new restaurants or deleting them. `,
+        image: "./assets/Bite-Sized-Traveling.png",            
+        stack: "This project was built with: React, CSS3, Firebase",
+        source: "https://github.com/BiteSizedTravelling/Project4",
+        liveLink: "https://bite-sized-travel-project.netlify.app"
+    },
 ];
 
 
 
-const displayProject = (count) => {
-    document.querySelector('.projectHeading').textContent = projects[count].name;
-    document.querySelector('.projectDescription').textContent = projects[count].description;
-    document.querySelector('.projectImage').src = projects[count].image;
-    document.querySelector('.projectStack').textContent = projects[count].stack;
-    document.querySelector('.sourceLink').href = projects[count].source;
-    document.querySelector('.liveLink').href = projects[count].liveLink;
+const displayProject = (page) => {
+    document.querySelector('.projectHeading').textContent = projects[page].name;
+    document.querySelector('.projectDescription').textContent = projects[page].description;
+    document.querySelector('.projectImage').src = projects[page].image;
+    document.querySelector('.projectStack').textContent = projects[page].stack;
+    document.querySelector('.sourceLink').href = projects[page].source;
+    document.querySelector('.liveLink').href = projects[page].liveLink;
+    document.querySelector('.stepNumber').textContent = page + 1;
 }
 
 //Controls for the image carousel.
-const sliderControls = (count) => {
+const sliderControls = (page) => {
     document.querySelector('.fa-chevron-left').addEventListener('click', () => {
-        if(count === 0){
-            count === 0;
-        } else {
-            count--;
+        if(page <= 0 ){
+            page = projects.length;
+            page--;
+        } else  {
+            page--;
         }
-        displayProject(count);
+        displayProject(page);
     });
     document.querySelector('.fa-chevron-right').addEventListener('click', () => {
-        count++;
-        console.log(count)
-        displayProject(count)
+        if(page >= projects.length - 1) {
+            page = 0;
+        } else {
+            page++;
+        }
+        displayProject(page)
     });
 }
 
