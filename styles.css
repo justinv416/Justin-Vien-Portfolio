@@ -31,6 +31,10 @@ a {
     color: black;
 }
 
+ul {
+    list-style-type: none;
+}
+
 nav {
     font-family: var(--font-body);
     width: 40%;
@@ -42,7 +46,6 @@ nav ul {
     /* background-color: violet; */
     justify-content: space-between;
     text-transform: uppercase;
-    list-style-type: none;
     padding-top: 50px;
     align-items: baseline;
     /* background-color: lightcoral; */
@@ -52,7 +55,10 @@ nav ul li a {
     transition: color 0.3s ease-in-out;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:focus,
+footer ul li a:hover, 
+footer ul li a:focus {
     color: var(--color-secondary);
 }
 
@@ -76,7 +82,7 @@ p {
 }
 
 header {
-    /* height: 100vh; */
+    min-height: 100vh;
     background-color: var(--color-background);
 }
 
@@ -144,7 +150,7 @@ header {
 }
 
 .about {
-    /* height: 100vh; */
+    min-height: 100vh;
     background-color: var(--color-background);
 }
 
@@ -169,7 +175,7 @@ header {
     line-height: 35px; 
 }
 
-.aboutMeContainer h2 {
+.aboutMeContainer h2, .projects h2 {
     font-size: 3rem;
 }
 
@@ -197,7 +203,8 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 30%;
+    width: 100%;
+    height: 50%;
     padding: 5%;
 }
 
@@ -212,6 +219,8 @@ header {
 .skillsIconContainer  {
     text-align: center;
     /* background-color: mediumvioletred; */
+    width: 200px;
+    margin: auto;
 }
 
 .projects {
@@ -241,6 +250,18 @@ h3 {
 
 .projectDetails {
     /* background-color: mediumvioletred; */
+}
+
+.projectDescription {
+    padding: 20px 0;
+}
+
+.projectHeading {
+    padding-top: 20px;
+}
+
+.projectLinks {
+    padding: 20px 0;
 }
 
 .projectDetails i {
@@ -277,7 +298,7 @@ h3 {
 .projectsSlider i {
     color: var(--color-background);
     padding: 20px;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.2s ease-in-out;
     cursor: pointer;
 }
 
@@ -310,4 +331,54 @@ h3 {
 footer {
     background-color: var(--color-background-tertiary);
     color: var(--color-background);
+}
+
+footer .wrapper {
+    padding: 100px 0;
+}
+
+footer .logo {
+    border-right: 2px solid var(--color-background);
+    border-left: 2px solid var(--color-background);
+    margin: 0 auto;
+}
+
+footer ul:first-of-type {
+    /* background-color: violet; */
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 0 auto;
+    font-family: var(--font-body);
+    padding: 50px 0 25px 0;
+}
+
+footer ul:nth-of-type(2) {
+    /* background-color: yellowgreen; */
+    display: flex;
+    /* width: 50%; */
+    margin: 0 auto;
+    justify-content: center;
+}
+
+footer i {
+    font-size: 2rem;
+}
+
+footer .fa-linkedin {
+    margin-right: 10px;
+}
+
+footer .fa-github {
+    margin-left: 10px;
+}
+
+footer p {
+    text-align: center;
+    padding: 25px 0 50px 0;
+}
+
+footer ul li a {
+    color: var(--color-background);
+    transition: color 0.2s ease-in-out;
 }
