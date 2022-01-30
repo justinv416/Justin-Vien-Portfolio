@@ -83,6 +83,8 @@ const displayProject = (page) => {
 
 //Controls for the image carousel.
 const sliderControls = (page) => {
+    //Maybe use event.target to dry up code
+    //Controls left arrow
     document.querySelector('.fa-chevron-left').addEventListener('click', () => {
         if(page <= 0 ){
             page = projects.length;
@@ -92,6 +94,7 @@ const sliderControls = (page) => {
         }
         displayProject(page);
     });
+    //Controls right arrow. 
     document.querySelector('.fa-chevron-right').addEventListener('click', () => {
         if(page >= projects.length - 1) {
             page = 0;
@@ -102,9 +105,17 @@ const sliderControls = (page) => {
     });
 }
 
+const navControl = () => {
+    document.querySelector('.hamburger').addEventListener('click', () => {
+        console.log('adfadfaf')
+        document.querySelector('.mobileNav').classList.toggle('opened')
+    })
+}
+
 const init = () => {
     // displayProject();
     sliderControls(0)
+    navControl();
 }
 
 init();
