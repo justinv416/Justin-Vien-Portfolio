@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Justin Vien's web developer portfolio.">
     <title>Justin Vien</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,15 +33,20 @@
                     <li><a href="#about">About.</a></li>
                     <li><a href="#projects">Projects.</a></li>
                     <li><a href="#contact">Contact.</a></li>
-                </ul>            </nav>
+                </ul>            
+            </nav>
             <div class="headerContainer">
                 <div class="headingContainer">
                     <h1>Justin <span>Vien.</span></h1>
                     <p>Front End Web Developer</p>
                     <div class="linkToSection">
                         <a href="#about">
-                            <button class="linkButton">
-                                <i class="fas fa-chevron-down linkIcon"></i>
+                            <button class="linkButton" aria-label="Click to go to about section.">
+                                <i 
+                                    class="fas fa-chevron-down linkIcon" 
+                                    aria-label="Icon indicating a chevron pointing down."
+                                >
+                                </i>
                             </button>
                         </a>
                         <div class="line"></div>
@@ -49,7 +55,11 @@
                 </div>
                 <div class="sliderContainer">
                     <div class="slider">
-                        <img src="./assets/image1-oskar-yildiz.jpg" alt="" class="sliderImage">
+                        <img 
+                            src="./assets/image1-oskar-yildiz.jpg" 
+                            alt="An image of code displayed on a laptop, with a lit lightbulb in the background." 
+                            class="sliderImage"
+                        >
                     </div>
                     <div class="sidebar">
                         <p>Project Showcase</p>
@@ -75,7 +85,7 @@
                         </p>
                         <div class="linkToMedium">
                             <a href="https://www.medium.com/@justinvien416/why-i-write-code-4fbd7b8a461c" target="blank">
-                                <button class="linkButton">
+                                <button class="linkButton" aria-label="Click to go to Justin Vien's Medium article.">
                                     <i class="fab fa-medium linkIcon"></i>
                                 </button>
                             </a>
@@ -85,7 +95,7 @@
                     </div>
                 </div>
                 <div class="aboutImage">
-                    <img src="./assets/Me.jpg" alt="" class="meImage">
+                    <img src="./assets/Me.jpg" alt="A photo of Justin Vien." class="meImage">
                 </div>
             </div>
             <article id="skills">
@@ -96,7 +106,7 @@
                             <p>Just some of the technologies that i have worked with.</p>
                             <div class="linkToProjects">
                                 <a href="#projects">
-                                    <button class="linkButton">
+                                    <button class="linkButton" aria-label="Click to go to projects section.">
                                         <i class="fas fa-chevron-down linkIcon"></i>
                                     </button>
                                 </a>
@@ -106,34 +116,34 @@
                         </div>
                         <div class="skillsIconsContainer">
                             <div class="skillsIconContainer">
-                                <i class="fab fa-html5"></i>
+                                <i class="fab fa-html5" aria-label="An icon indicating the HTML5 logo."></i>
                                 <p>HTML</p>
                             </div>
                             <div class="skillsIconContainer">
-                                <i class="fab fa-css3-alt"></i>
+                                <i class="fab fa-css3-alt" aria-label="An icon indicating the CSS3 logo."></i>
                                 <p>CSS</p>
                             </div>
                             <div class="skillsIconContainer">
-                                <i class="fab fa-sass"></i>
+                                <i class="fab fa-sass" aria-label="An icon indicating the SASS logo."></i>
                                 <p>SASS</p>
                             </div>
                             <div class="skillsIconContainer">
-                                <i class="fas fa-dollar-sign"></i>
+                                <i class="fas fa-dollar-sign" aria-label="An icon indicating a dollar sign, used to represent jQuery."></i>
                                 <p>jQuery</p>
                             </div><div class="skillsIconContainer">
-                                <i class="fab fa-js"></i>
+                                <i class="fab fa-js" aria-label="An icon indicating the javaScript logo."></i>
                                 <p>JavaScript</p>
                             </div><div class="skillsIconContainer">
-                                <i class="fab fa-react"></i>
+                                <i class="fab fa-react" aria-label="An icon indicating the React.js logo."></i>
                                 <p>React</p>
                             </div><div class="skillsIconContainer">
-                                <i class="fab fa-git-alt"></i>
+                                <i class="fab fa-git-alt" aria-label="An icon indicating the git logo."></i>
                                 <p>Git</p>
                             </div><div class="skillsIconContainer">
-                                <i class="fas fa-database"></i>
+                                <i class="fas fa-database" aria-label="An icon indicating a database, serves as firebase logo. "></i>
                                 <p>Firebase</p>
                             </div><div class="skillsIconContainer">
-                                <i class="fas fa-handshake"></i>
+                                <i class="fas fa-handshake" aria-label="An icon indicating a handshake."></i>
                                 <p>Pair Programming</p>
                             </div>    
                         </div>
@@ -144,7 +154,7 @@
         <section id="projects" class="projects">
             <div class="wrapper">
                 <div class="projectImageContainer">
-                    <img src="./assets/JS-Hero.png" alt="" class="projectImage">
+                    <img src="./assets/JS-Hero.png" alt="A photo of the current prjoect." class="projectImage">
                 </div>   
                 <div class="projectDetailsContainer">
                     <div class="projectDetails">
@@ -158,11 +168,11 @@
                         </p>
                         <p class="projectStack">This project was built with: HTML5, CSS3, jQuery, and Howler.js.</p>
                         <div class="projectLinks">
-                            <a href="https://github.com/justinv416/JS-Hero" class="sourceLink" target="blank">
-                                <i class="fab fa-github"></i>
+                            <a href="https://github.com/justinv416/JS-Hero" class="sourceLink" target="blank" aria-label="Click to view github repo for this project.">
+                                <i class="fab fa-github" aria-label="Icon indicating the github logo."></i>
                             </a>
-                            <a href="https://jshero.netlify.app" class="liveLink" target="blank">
-                                <i class="fas fa-external-link-alt"></i>
+                            <a href="https://jshero.netlify.app" class="liveLink" target="blank" aria-label="Click to view the live site of this project.">
+                                <i class="fas fa-external-link-alt" aria-label="Icon indicating an external link to the live site."></i>
                             </a>
                         </div>
                     </div>
@@ -170,8 +180,8 @@
                         <p class="step"><span class="stepNumber">1</span> of <span class="maxStep">6</span></p>
                         <div class="line"></div>
                         <div class="projectSliderControls">
-                            <i class="fas fa-chevron-left"></i>
-                            <i class="fas fa-chevron-right"></i>
+                            <i class="fas fa-chevron-left" aria-label="Icon indicating a left chevron."></i>
+                            <i class="fas fa-chevron-right" aria-label="Icon indicating a right chevron."></i>
                         </div>
                     </div>
                 </div>
@@ -188,8 +198,8 @@
                         <h3>Email:</h3>
                         <p>Click on the envelope below to write me an email (Link will open in your email client).</p>
                         <a href="mailto:justinvien.developer@gmail.com">
-                            <button class="linkButton">
-                                <i class="fas fa-envelope linkIcon"></i>
+                            <button class="linkButton" aria-label="Click to open your email client.">
+                                <i class="fas fa-envelope linkIcon" aria-label="Icon indicating a email envelope."></i>
                             </button>
                         </a>
                     </div>
@@ -197,8 +207,8 @@
                         <h3>LinkedIn:</h3>
                         <p>Click on the Linkedin button below to send me a message on linkedin (will open a link to my linkedin profile in a new tab).</p>
                         <a href="https://www.linkedin.com/in/justin-vien-48116bb9/" target="blank">
-                           <button class="linkButton">
-                                <i class="fab fa-linkedin linkIcon"></i>
+                           <button class="linkButton" aria-label="Click to go to Justin Vien's Linkedin profile.">
+                                <i class="fab fa-linkedin linkIcon" aria-label="Icon indicating the linkedin logo."></i>
                            </button>
                         </a>
                     </div>
@@ -221,13 +231,13 @@
             <a href="#header" class="btt">Back to top</a>
             <ul class="socialLinks">
                 <li>
-                    <a href="https://www.linkedin.com/in/justin-vien-48116bb9/" target="blank">
-                        <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/justin-vien-48116bb9/" target="blank" aria-label="Click to go to Justin Vien's linkedin profile.">
+                        <i class="fab fa-linkedin" aria-label="Icon indicating the linkedin logo."></i>
                     </a>
                 </li>
                 <li>
-                    <a href="https://github.com/justinv416">
-                        <i class="fab fa-github"></i>
+                    <a href="https://github.com/justinv416" aria-label="Click to got to Justin Vien's github profile">
+                        <i class="fab fa-github" aria-label="Icon indicating the github logo."></i>
                     </a>
                 </li>
             </ul>

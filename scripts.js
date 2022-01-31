@@ -136,7 +136,6 @@ const init = () => {
     // displayProject();
     sliderControls(0)
     navControl();
-    navScrollPosition();
 }
 
 init();
