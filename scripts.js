@@ -1,3 +1,5 @@
+//Look into splt.js and intersection observer api for text animation and on scroll 
+
 //Anime.js title animation
 // let titleAnimation = anime({
 //     targets: 'h1',

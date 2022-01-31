@@ -1,3 +1,5 @@
+<!-- TODO: add a span and .sr-only class to icons, set i element to aria-hidden="true". -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
     <header id="header">
         <div class="wrapper">
             <nav>
@@ -61,18 +65,20 @@
                             class="sliderImage"
                         >
                     </div>
-                    <div class="sidebar">
+                    <!-- <div class="sidebar">
                         <p>Project Showcase</p>
                         <div class="dot"></div>
                         <div class="dot"></div>
                         <div class="dot"></div>
                         <div class="dot"></div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </header>
+
     <main>
+
         <section id="about" class="about">
             <div class="aboutWrapper wrapper">
                 <div class="aboutMeContainer">
@@ -98,6 +104,7 @@
                     <img src="./assets/Me.jpg" alt="A photo of Justin Vien." class="meImage">
                 </div>
             </div>
+
             <article id="skills">
                 <div class="wrapper">
                     <div class="skillsContainer">
@@ -142,18 +149,34 @@
                             </div><div class="skillsIconContainer">
                                 <i class="fas fa-database" aria-label="An icon indicating a database, serves as firebase logo. "></i>
                                 <p>Firebase</p>
-                            </div><div class="skillsIconContainer">
+                            </div>
+                            <div class="skillsIconContainer">
                                 <i class="fas fa-handshake" aria-label="An icon indicating a handshake."></i>
                                 <p>Pair Programming</p>
-                            </div>    
+                            </div>
+                            <div class="skillsIconContainer">
+                                <i class="fas fa-universal-access"></i>                                
+                                <p>Accessible Design</p>
+                            </div>
+                            <div class="skillsIconContainer">
+                                <i class="fas fa-users"></i>
+                                <p>Teamwork</p>
+                            </div>
+                            <div class="skillsIconContainer">
+                                <i class="fas fa-server"></i>
+                                <p>REST Apis</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </article>
+
         </section>
+
         <section id="projects" class="projects">
             <div class="wrapper">
                 <div class="projectImageContainer">
+                    <h2 class="projectsHeading">Projects</h2>
                     <img src="./assets/JS-Hero.png" alt="A photo of the current prjoect." class="projectImage">
                 </div>   
                 <div class="projectDetailsContainer">
@@ -187,6 +210,7 @@
                 </div>
             </div>
         </section>
+        
         <section id="contact" class="contact">
             <div class="wrapper">
                 <div class="contactContent">
@@ -215,7 +239,9 @@
                 </div>
             </div>
         </section>
+
     </main>
+
     <footer>
         <div class="wrapper">
             <div class="logo">
@@ -243,8 +269,10 @@
             </ul>
         </div>
     </footer>
+
     <script src="https://kit.fontawesome.com/35e5501a65.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="scripts.js"></script>
+
 </body>
 </html>

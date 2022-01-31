@@ -16,6 +16,7 @@ html{scroll-behavior:smooth; font-size: 125%; line-height:1.15;-ms-text-size-adj
     --color-background: #f9f9f9;
     --color-background-secondary: #fff;
     --color-background-tertiary: #111111;
+    --color-heading: #111111;
     --color-text-secondary: #646464;
     --color-secondary: #0dd97e;
 }
@@ -86,7 +87,7 @@ p {
 
 header {
     min-height: 100vh;
-    background-color: var(--color-background);
+    background-color: var(--color-background-secondary);
 }
 
 .logo {
@@ -102,7 +103,6 @@ header {
     padding: 10px;
 }
 
-
 .hamburger {
     font-size: 2rem;
     display: none;
@@ -110,7 +110,6 @@ header {
 
 .headerContainer {
     height: calc(90vh - 73px);
-    /* background-color: var(--color-background-secondary); */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -120,7 +119,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background-color: wheat; */
     width: 80%;
     padding-top: 30px;
 }
@@ -130,7 +128,12 @@ header {
 }
 
 .linkCaption {
-    color: var(--color-background-tertiary);
+    color: var(--color-heading);
+}
+
+.about .linkCaption {
+    padding: 0;
+    color: var(--color-heading);
 }
 
 .aboutMeContainer .linkToMedium p, 
@@ -213,14 +216,14 @@ i {
     height: 100%;
 }
 
-.sidebar {
+/* .sidebar {
     background-color: var(--color-background-tertiary);
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 10%;
-}
+} */
 
 .sidebar p span {
     display: inline;
@@ -561,12 +564,16 @@ footer ul li a {
 }
 
 /* Tablet MQ */
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     
     /* Containers & sections */
     .headerContainer, .about, .projects, .projects .wrapper, 
     .contact, .contact .wrapper {
         height: auto;
+    }
+
+    .headingContainer {
+        margin: 0 0 0 0;
     }
 
     .aboutMeContainer {
@@ -588,6 +595,15 @@ footer ul li a {
 
     .contact .wrapper {
         flex-direction: column;
+    }
+
+    .contactContent, .contactContentLinks {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contactContent p {
+        padding-top: 30px;
     }
 
     .projectImageContainer {
@@ -618,6 +634,7 @@ footer ul li a {
         left: 0;
         padding: 0 30px;
         z-index: 1;
+        background-color: var(--color-background-secondary);
     }
 
       nav ul {
@@ -625,16 +642,25 @@ footer ul li a {
         padding: 20px 0;
     }
 
+    .linkToSection {
+        margin: 0 auto;
+    }
+
     .navMain {
         padding: 20px 0;
     }
 
+    .aboutImage {
+        max-width: 50%;
+        max-height: 100%;
+    }
+
     .headerContainer {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .headingContainer {
-        margin: 10% 0 0 0;
+        /* margin: 10% 0 0 0; */
         width: 100%;
         text-align: center;
     }
@@ -652,69 +678,68 @@ footer ul li a {
     }
 }
 
+
+@media (max-width: 500px) {
+    .skillsIconContainer {
+        width: 150px;
+    }
+
+    .navMain {
+        padding: 0;
+    }
+
+    .logo h2 {
+        font-size: 1rem;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+     h2 {
+        font-size: 2rem;
+    }
+}
+
 /* Mobile MQ */
 @media (max-width: 400px) {
+    
     header {
         height: auto;
     }
-
-    
+ 
     .headingContainer {
         margin: 20% auto;
     }
 
     h1 {
         font-size: 4rem;
-    }
-
-    
+    }    
 
     .sliderContainer {
         width: 100%;
     }
 
-    
-
-    
-
-   
-    
-
     .projectDetailsContainer {
         width: 100%;
     }
-
-    
 
     .aboutMeContent h2 {
         text-align: center;
     }
 
-    
-
-    
-
     .contactContent {
         width: 100%;
     }
 
-   
-
-  
-    
-
-    .navMain {
-        padding-top: 20px;
+    .projects .line {
+        width: 30%;
     }
 
     .mobileNav li {
         padding: 30px 0;
         /* background-color: lightseagreen; */
     }
-
-    
-
-    
 
     
 }
