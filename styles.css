@@ -72,6 +72,7 @@ h1 {
 
 h2 {
     font-family: var(--font-heading);
+    font-size: 3rem;
 }
 
 h1 span {
@@ -80,6 +81,7 @@ h1 span {
 
 p {
     font-family: var(--font-body);
+    color: var(--color-text-secondary);
 }
 
 header {
@@ -95,6 +97,7 @@ header {
 }
 
 .logo h2 {
+    font-size: 1.5rem;
     font-weight: 400;
     padding: 10px;
 }
@@ -126,8 +129,13 @@ header {
     background-color: yellowgreen;
 }
 
-.headingContainer .linkToSection p {
+.linkCaption {
     color: var(--color-background-tertiary);
+}
+
+.aboutMeContainer .linkToMedium p, 
+.skillsContent .linkToProjects p {
+    padding-top: 0;
 }
 
 .headingContainer {
@@ -137,8 +145,8 @@ header {
     margin: 0 0 3% 8%;
 }
 
-.headingContainer button, .skillsContent button, 
-.aboutMeContent button, .emailLink button, .linkedInLink button {
+/* Buttons */
+.linkButton {
     background-color: var(--color-secondary);
     border: none;
     border-radius: 40px;
@@ -147,6 +155,31 @@ header {
     position: relative;
 }
 
+.linkButton:hover, .linkButton:focus {
+    background-color: var(--color-background);
+    outline: 3px solid var(--color-secondary);
+    border-radius: 40px;
+}
+
+.contactContentLinks button {
+    margin-top: 30px;
+}
+
+/* Icons */
+i {
+    font-size: 2rem;
+}
+
+.linkIcon {
+    color: var(--color-background);
+    padding: 10px 25px;
+}
+
+.linkIcon:hover, .linkIcon:focus {
+    color: var(--color-secondary);
+}
+
+/* Decorative Lines */
 .linkToSection .line, .linkToMedium .line, .linkToProjects .line {
     height: 1px;
     width: 25%;
@@ -162,63 +195,15 @@ header {
     margin-top: 30px;
 }
 
-.aboutMeContainer .linkToMedium p, 
-.skillsContent .linkToProjects p {
-    padding-top: 0;
-    color: var(--color-background-tertiary);
-}
 
-.headingContainer button:hover,
-.headingContainer button:focus,
-.aboutMeContent button:hover, 
-.aboutMeContent button:focus,
-.skillsContent button:hover,
-.skillsContent button:focus,
-.contactContentLinks button:hover,
-.contactContentLinks button:focus {
-    background-color: var(--color-background);
-    outline: 3px solid var(--color-secondary);
-    /* border: none; */
-    border-radius: 40px;
-}
-
-.headingContainer i, .aboutMeContent i, .skillsContent i, .contactContentLinks i {
-    font-size: 2rem;
-    color: var(--color-background);
-    padding: 10px 25px;
-}
-
-.contactContentLinks button {
-    margin-top: 30px;
-}
-
-/* .aboutMeContent i {
-    color: var(--color-background);
-    font-size: 2rem;
-} */
-
-.headingContainer i:hover, .headingContainer i:focus,
-.aboutMeContent i:hover, .aboutMeContent i:focus, 
-.skillsContent i:hover, .skillsContent i:focus, 
-.contactContentLinks i:hover, .contactContentLinks i:focus {
-    color: var(--color-secondary);
-}
-
-.headingContainer p {
-    font-size: 1.3rem;
-    color: var(--color-text-secondary);
-}
 
 .sliderContainer {
-    background-color: blueviolet;
     width: 50%;
     display: flex;
     height: 100%;
 }
 
-
 .slider {
-    background-color: turquoise;
     width: 100%;
     height: 100%;
 }
@@ -275,10 +260,6 @@ header {
     color: var(--color-text-secondary);
 }
 
-.aboutMeContainer h2, .projects h2 {
-    font-size: 3rem;
-}
-
 .aboutMeContainer p, .skillsContent p {
     padding-top: 30px;
 }
@@ -298,10 +279,6 @@ header {
     display: flex;
     justify-content: space-between;
     /* background-color: lightsteelblue; */
-}
-
-.skillsContainer h2 {
-    font-size: 3rem;
 }
 
 .skillsIconsContainer {
@@ -354,10 +331,6 @@ h3 {
     justify-content: space-between;
 }
 
-.projectDetails {
-    /* background-color: mediumvioletred; */
-}
-
 .projectDescription {
     padding: 20px 0;
 }
@@ -389,6 +362,10 @@ h3 {
     font-size: 1.8rem;
 }
 
+.projectDetails p {
+    color: var(--color-text-secondary);
+}
+
 .projectImage {
     width: 100%;
 }
@@ -405,33 +382,29 @@ h3 {
     justify-content: center;
 }
 
-.projectsSlider {
+.projectsSliderContainer {
     background-color: var(--color-background-tertiary);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.projectsSlider p {
+.projectsSliderContainer p {
     color: var(--color-background);
 }
 
-.projectsSlider i {
+.projectsSliderContainer i {
     color: var(--color-background);
     padding: 20px;
     transition: color 0.2s ease-in-out;
     cursor: pointer;
+    font-size: 1.5rem;
 }
 
-.projectsSlider i:hover, 
-.projectsSlider i:focus {
+.projectsSliderContainer i:hover, 
+.projectsSliderContainer i:focus {
     color: var(--color-secondary);
 }
-/* .dot {
-    background-color: grey;
-    width: 10px;
-    height: 10px;
-} */
 
 .sidebar p {
     color: white;
@@ -470,12 +443,21 @@ h3 {
     justify-content: center;
 }
 
+.contactContent p {
+    color: var(--color-text-secondary);
+}
+
 .contactContentLinks {
     width: 40%;
 }
 
 .contactContentLinks p {
     margin-top: 20px;
+    color: var(--color-text-secondary);
+}
+
+.contactContentLinks h3 {
+    font-size: 2rem;
 }
 
 .contactContent i {
@@ -488,17 +470,6 @@ h3 {
     color: var(--color-secondary);
 }
 
-.contact h2 {
-    font-size: 3rem;
-}
-
-/* .emailLink {
-    background-color: lightgray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-
 .contactContentLinks {
     /* background-color: lightsalmon; */
     display: flex;
@@ -510,22 +481,6 @@ h3 {
     text-align: center;
     margin-top: 30px;
 }
-
-.emailLink i, .linkedInLink i {
-    font-size: 2rem;
-    color: var(--color-background);
-}
-
-/* .emailLink button, .linkedInLink button {
-    padding: 20px 0;
-    border: none;
-    border-radius: 40px;
-    width: 20%;
-    background-color: var(--color-secondary);
-    margin: 20px 0;
-} */
-
-
 
 footer {
     background-color: var(--color-background-tertiary);
@@ -560,9 +515,7 @@ footer ul:nth-of-type(2) {
     justify-content: center;
 }
 
-footer i {
-    font-size: 2rem;
-}
+
 
 footer .fa-linkedin {
     margin-right: 10px;
