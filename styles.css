@@ -16,7 +16,7 @@ html{scroll-behavior:smooth; font-size: 125%; line-height:1.15;-ms-text-size-adj
     --color-background: #f9f9f9;
     --color-background-secondary: #fff;
     --color-background-tertiary: #111111;
-    --color-primary: #646464;
+    --color-text-secondary: #646464;
     --color-secondary: #0dd97e;
 }
 
@@ -122,6 +122,10 @@ header {
     padding-top: 30px;
 }
 
+.wrapperInner {
+    background-color: yellowgreen;
+}
+
 .headingContainer .linkToSection p {
     color: var(--color-background-tertiary);
 }
@@ -133,7 +137,8 @@ header {
     margin: 0 0 3% 8%;
 }
 
-.headingContainer button, .skillsContent button {
+.headingContainer button, .skillsContent button, 
+.aboutMeContent button, .emailLink button, .linkedInLink button {
     background-color: var(--color-secondary);
     border: none;
     border-radius: 40px;
@@ -142,33 +147,66 @@ header {
     position: relative;
 }
 
-.linkToSection .line {
+.linkToSection .line, .linkToMedium .line, .linkToProjects .line {
     height: 1px;
     width: 25%;
     background-color: var(--color-background-tertiary);
 }
 
+.linkToMedium, .linkToProjects {
+    /* background-color: wheat; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.aboutMeContainer .linkToMedium p, 
+.skillsContent .linkToProjects p {
+    padding-top: 0;
+    color: var(--color-background-tertiary);
+}
+
 .headingContainer button:hover,
-.headingContainer button:focus {
+.headingContainer button:focus,
+.aboutMeContent button:hover, 
+.aboutMeContent button:focus,
+.skillsContent button:hover,
+.skillsContent button:focus,
+.contactContentLinks button:hover,
+.contactContentLinks button:focus {
     background-color: var(--color-background);
     outline: 3px solid var(--color-secondary);
     /* border: none; */
     border-radius: 40px;
 }
 
-.headingContainer i {
+.headingContainer i, .aboutMeContent i, .skillsContent i, .contactContentLinks i {
     font-size: 2rem;
     color: var(--color-background);
     padding: 10px 25px;
 }
 
-.headingContainer i:hover {
+.contactContentLinks button {
+    margin-top: 30px;
+}
+
+/* .aboutMeContent i {
+    color: var(--color-background);
+    font-size: 2rem;
+} */
+
+.headingContainer i:hover, .headingContainer i:focus,
+.aboutMeContent i:hover, .aboutMeContent i:focus, 
+.skillsContent i:hover, .skillsContent i:focus, 
+.contactContentLinks i:hover, .contactContentLinks i:focus {
     color: var(--color-secondary);
 }
 
 .headingContainer p {
     font-size: 1.3rem;
-    color: var(--color-primary);
+    color: var(--color-text-secondary);
 }
 
 .sliderContainer {
@@ -231,6 +269,10 @@ header {
     width: 80%;
     padding: 10%;
     line-height: 35px; 
+}
+
+.aboutMeContent p {
+    color: var(--color-text-secondary);
 }
 
 .aboutMeContainer h2, .projects h2 {
@@ -428,6 +470,14 @@ h3 {
     justify-content: center;
 }
 
+.contactContentLinks {
+    width: 40%;
+}
+
+.contactContentLinks p {
+    margin-top: 20px;
+}
+
 .contactContent i {
     font-size: 2rem;
     transition: color 0.2s ease-in-out;
@@ -458,6 +508,7 @@ h3 {
 
 .emailLink, .linkedInLink {
     text-align: center;
+    margin-top: 30px;
 }
 
 .emailLink i, .linkedInLink i {
@@ -465,20 +516,16 @@ h3 {
     color: var(--color-background);
 }
 
-.emailLink button, .linkedInLink button,
-.aboutMeContent button {
+/* .emailLink button, .linkedInLink button {
     padding: 20px 0;
     border: none;
     border-radius: 40px;
     width: 20%;
     background-color: var(--color-secondary);
     margin: 20px 0;
-}
+} */
 
-.aboutMeContent i {
-    color: var(--color-background);
-    font-size: 2rem;
-}
+
 
 footer {
     background-color: var(--color-background-tertiary);
