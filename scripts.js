@@ -45,7 +45,7 @@ const projects = [
                     This website is fully responsive with mobile navigation, a fully functional image slider
                     on the home page, and  the ability to allow users to write comments on the blog page.`,
         image: "./assets/Creative.png",
-        stack: "This project was built with: HTML5, SASS, Vanilla JS",
+        stack: "This project was built with: HTML5, SASS, BEM methodology, Vanilla JS",
         source: "https://github.com/justinv416/Agency-Creative",
         liveLink: "https://agency-creative.netlify.app/"
     },
