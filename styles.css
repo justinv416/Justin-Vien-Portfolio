@@ -223,6 +223,7 @@ footer ul li a:focus {
 
 /* About section */
 .about {
+    min-height: 100vh;
     background-color: var(--color-background);
 }
 
@@ -254,7 +255,7 @@ footer ul li a:focus {
 }
 
 .aboutMeContent, .skillsContent {
-    /* background-color: lightslategray; */
+    background-color: var(--color-background-secondary);
     width: 80%;
     padding: 10%;
     line-height: 35px; 
@@ -287,11 +288,8 @@ footer ul li a:focus {
 .skillsContainer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     /* background-color: lightsteelblue; */
-}
-
-.skillsContent {
-    background-color: var(--color-background-secondary);
 }
 
 .skillsIconsContainer {
@@ -321,22 +319,21 @@ footer ul li a:focus {
 
 /* Projects section */
 .projects {
-    background-color: var(--color-background);
     height: 100vh;
 }
 
 .projects .wrapper {
     display: flex;
     flex-direction: row;
-    height: 90vh;
+    height: 100vh;
+    align-items: center;
 }
 
 .projectDetailsContainer {
     background-color: var(--color-background);
     width: 50%;
-    padding: 10%;
+    padding: 50px;
     line-height: 35px; 
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -432,7 +429,7 @@ footer ul li a:focus {
 /* Contact Section */
 .contact {
     min-height: 100vh;
-    /* background-color: violet; */
+    background-color: var(--color-background);
     display: flex;
     align-items: center;
 }
@@ -441,6 +438,7 @@ footer ul li a:focus {
     /* background-color: wheat; */
     display: flex;
     height: 100vh;
+    align-items: center;
 }
 
 .contactContent {
@@ -457,6 +455,8 @@ footer ul li a:focus {
 
 .contactContentLinks {
     width: 40%;
+    background-color: var(--color-background-secondary);
+    padding: 50px;
 }
 
 .contactContentLinks p {
