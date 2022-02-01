@@ -722,6 +722,27 @@ footer ul li a {
         margin: 0;
     }
 
+    .skillsContent {
+        width: 100%;
+    }
+
+    .skillsContent h2 {
+        text-align: center;
+    }
+
+    .projectHeading {
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .contact h3 {
+        font-size: 1.5rem;
+    }
+
+    .headerContentContainer {
+        position: static;
+    }
+
     .skillsIconContainer {
         width: 150px;
     }
