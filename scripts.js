@@ -15,7 +15,7 @@ const projects = [
                     and a respective take damage animation if the user gets the question wrong.
                     I designed the UI with inspiration from old final fantasy RPGs. `,
         image: "./assets/JS-Hero.png",
-        stack: "This project was built with: HTML5, CSS3, jQuery, and Howler.js.",
+        stack: "This project was built with: HTML5, CSS3, jQuery, vanilla JS(OOP), and Howler.js.",
         source: "https://github.com/justinv416/JS-Hero",
         liveLink: "https://jshero.netlify.app"
     },
