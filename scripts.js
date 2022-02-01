@@ -1,11 +1,63 @@
 //Look into splt.js and intersection observer api for text animation and on scroll 
 
-//Anime.js title animation
-// let titleAnimation = anime({
-//     targets: 'h1',
-//     translateY: -100
-// })
 
+//Splt.js animation
+const splitText = splt({
+    reveal: true
+});
+
+//Anime.js animation timeline
+const titleTimeline = anime.timeline({
+  targets: '.reveal',
+  translateY: [100, 0],
+  direction: 'alternate',
+  loop: 0,
+  delay: anime.stagger(50),
+  easing: 'cubicBezier(.71,-0.77,.43,1.67)',
+});
+
+titleTimeline.add({
+    targets: '.navLinks',
+    opacity: [0, 1],
+    translateY: [20, 0],
+    easing: 'spring(1, 80, 10, 0)'
+}, '+=100').add({
+    targets: '.headerRole',
+    opacity: [0, 1],
+    translateY: [20, 0],
+    duration: 100,
+    easing: 'spring(1, 80, 10, 0)'
+}, '-=1000').add({
+    targets: '.linkToSection', 
+    opacity: [0, 1],
+    translateY: [20, 0],
+}, '-=2000').add({
+    targets: '.headerImage',
+    opacity: [0, 1],
+    duration: 1000
+}, '-=2000');
+
+let options = {
+    rootMargin: '0px',
+    threshold: 1.0
+}
+
+// const h2 = document.querySelectorAll('h2');
+
+// let observer = new IntersectionObserver(entries => {
+//     entries.forEach(entry => {
+//         h2[0].classList.add('splt');
+//         reveal()
+//     })
+// },
+//     {
+//         threshold: 1
+//     } 
+// )
+
+// observer.observe(h2[0])
+
+// console.log(h2)
 
 const projects = [
     {
@@ -53,9 +105,9 @@ const projects = [
         name: "Shoppable",
         description: `Shoppable is a e-commerce site that allows users to shop for products. 
                     This project features a dedicated product page, the ability for users to add and remove items 
-                    from a cart component which persists over sessions with the integration of firebase.`,
+                    from a cart component.`,
         image: "./assets/Shoppable.png",            
-        stack: "This project was built with: React, CSS3, Firebase",
+        stack: "This project was built with: React, CSS3",
         source: "https://github.com/justinv416/JustinVien-ProjectThree",
         liveLink: "https://thebettershoppable.netlify.app/"
     },
@@ -108,8 +160,10 @@ const sliderControls = (page) => {
 }
 
 const navControl = () => {
-    document.querySelector('.hamburger').addEventListener('click', () => {
-        console.log('adfadfaf')
+    document.querySelector('.mobileNavIcons').addEventListener('click', () => {
+        //Change accompanying aria label as well
+        let mobileNavIcon = document.querySelector('.fa-bars');
+        mobileNavIcon.classList.toggle('fa-times');
         document.querySelector('.mobileNav').classList.toggle('opened')
     })
 }

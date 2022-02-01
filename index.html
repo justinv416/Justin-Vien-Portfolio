@@ -30,7 +30,12 @@
                     <li class="navLinks"><a href="#about">About.</a></li>
                     <li class="navLinks"><a href="#projects">Projects.</a></li>
                     <li class="navLinks"><a href="#contact">Contact.</a></li>
-                    <li class="hamburger"><i class="fas fa-bars"></i></li>
+                    <li class="mobileNavIcons">
+                        <div class="hamburger">
+                            <i class="fas fa-bars"></i>
+                            <span class="sr-only hamburger">Hamburger navigation menu</span>
+                        </div>
+                    </li>
                 </ul>
                 <ul class="mobileNav">
                     <li><a href="index.html">Home.</a></li>
@@ -41,7 +46,10 @@
             </nav>
             <div class="headerContainer">
                 <div class="headerContentContainer">
-                    <h1>Justin <span>Vien.</span></h1>
+                    <h1 aria-label="Justin Vien">
+                        <span class="splt" aria-hidden="true">Justin</span> 
+                        <span class="splt lineBreak" aria-hidden="true">Vien.</span>
+                    </h1>
                     <p class="headerRole">Front End Web Developer</p>
                     <div class="linkToSection">
                         <a href="#about">
@@ -75,7 +83,7 @@
             <div class="aboutWrapper wrapper">
                 <div class="aboutMeContainer">
                     <div class="aboutMeContent">
-                        <h2>About Me</h2>
+                        <h2 class="aboutMeHeading">About Me</h2>
                         <p>
                             I am a front end developer who is passionate about creating functional and aesthetically pleasing interfaces. A
                             recent graduate of Juno College's Web Development Immersive Program, my passion for building things for the web.
@@ -266,7 +274,7 @@
             </ul>
         </div>
     </footer>
-
+    <script src="https://www.unpkg.com/spltjs@1.1.0"></script>
     <script src="https://kit.fontawesome.com/35e5501a65.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="scripts.js"></script>

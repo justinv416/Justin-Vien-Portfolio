@@ -35,6 +35,10 @@ h1 {
     margin: 0;
 }
 
+.lineBreak {
+    display: block;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -57,10 +61,6 @@ h2 {
 
 h3 {
     font-family: var(--font-heading);
-}
-
-h1 span {
-    display: block;
 }
 
 p {
@@ -162,9 +162,22 @@ nav a {
     background-color: #646464;      
 }
 
-.hamburger {
+.fa-times {
     font-size: 2rem;
     display: none;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }
 
 /* For mobile nav */
@@ -321,10 +334,6 @@ footer a:focus {
     padding: 20px 0;
 }
 
-.projectImageContainer .projectsHeading {
-    display: none;
-}
-
 .projectHeading {
     padding-top: 40px;
 }
@@ -343,6 +352,10 @@ footer a:focus {
 
 .projectImage {
     width: 100%;
+}
+
+.projectImageContainer .projectsHeading {
+    display: none;
 }
 
 .projectsSliderContainer {
@@ -580,6 +593,7 @@ footer ul li a {
     .aboutImage {
         width: 40%;
         height: 400px;
+        margin: 50px 0;
     }
 
     .aboutMeContent {
@@ -604,6 +618,7 @@ footer ul li a {
         padding: 10%;
         width: 100%;
         text-align: center;
+        margin-top: 50px;
     }
 
     /* Projects Section */
@@ -617,7 +632,8 @@ footer ul li a {
     }
 
     .projectLinks {
-        padding: 0;
+        padding: 20px 0;
+        justify-content: space-between;
     }
 
     .projectDetails .projectsHeading {
@@ -626,24 +642,30 @@ footer ul li a {
 
     .projectsHeading {
         font-size: 2rem;
+        text-align: center;
+        padding: 20px 0;
     }
 
     .projectHeading {
         padding: 0;
     }
 
-    .sliderContainer {
-        width: 75%;
+    /* Contact Section */
+    .contactContentLinks {
+        margin-bottom: 50px;
     }
 
-    /* Contact Section */
     .contactContent, .contactContentLinks {
         width: 100%;
         text-align: center;
     }
 
+    .contactContent h2 {
+        padding: 50px 0;
+    }
+
     .contactContent p {
-        padding-top: 30px;
+        padding-bottom: 50px;
     }
 
    /* Footer Section */
@@ -706,6 +728,12 @@ footer ul li a {
     .projectHeading {
         text-align: center;
         padding-top: 30px;
+    }
+
+    .projectsHeading {
+        font-size: 1.8rem;
+        text-align: center;
+        padding: 20px 0;
     }
 
     .contact h3 {
