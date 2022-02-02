@@ -1,5 +1,3 @@
-<!-- TODO: add a span and .sr-only class to icons, set i element to aria-hidden="true". -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,10 +24,10 @@
                             <h2>JV</h2>
                         </div>
                     </li>
-                    <li class="navLinks"><a href="index.html">Home.</a></li>
-                    <li class="navLinks"><a href="#about">About.</a></li>
-                    <li class="navLinks"><a href="#projects">Projects.</a></li>
-                    <li class="navLinks"><a href="#contact">Contact.</a></li>
+                    <li class="navLinks"><a href="index.html" aria-label="Click to go to home section">Home.</a></li>
+                    <li class="navLinks"><a href="#about" aria-label="Click to go to about section">About.</a></li>
+                    <li class="navLinks"><a href="#projects" aria-label="Click to go to projects section">Projects.</a></li>
+                    <li class="navLinks"><a href="#contact" aria-label="Click to go to contact section">Contact.</a></li>
                     <li class="mobileNavIcons">
                         <div class="hamburger">
                             <i class="fas fa-bars"></i>
@@ -38,10 +36,10 @@
                     </li>
                 </ul>
                 <ul class="mobileNav">
-                    <li><a href="index.html">Home.</a></li>
-                    <li><a href="#about">About.</a></li>
-                    <li><a href="#projects">Projects.</a></li>
-                    <li><a href="#contact">Contact.</a></li>
+                    <li><a href="index.html" aria-label="Click to go to home section">Home.</a></li>
+                    <li><a href="#about" aria-label="Click to go to about section">About.</a></li>
+                    <li><a href="#projects" aria-label="Click to go to projects section">Projects.</a></li>
+                    <li><a href="#contact" aria-label="Click to go to contact section">Contact.</a></li>
                 </ul>            
             </nav>
             <div class="headerContainer">
@@ -54,10 +52,8 @@
                     <div class="linkToSection">
                         <a href="#about">
                             <button class="linkButton" aria-label="Click to go to about section.">
-                                <i 
-                                    class="fas fa-chevron-down linkIcon" 
-                                    aria-label="Icon indicating a chevron pointing down."
-                                >
+                                <i class="fas fa-chevron-down linkIcon">
+                                <span class="sr-only">An icon of a chevron pointing down.</span>
                                 </i>
                             </button>
                         </a>
@@ -93,6 +89,7 @@
                             <a href="https://www.medium.com/@justinvien416/why-i-write-code-4fbd7b8a461c" target="blank">
                                 <button class="linkButton" aria-label="Click to go to Justin Vien's Medium article.">
                                     <i class="fab fa-medium linkIcon"></i>
+                                    <span class="sr-only">An icon indicating an external link to Medium.com.</span>
                                 </button>
                             </a>
                             <div class="line"></div>
@@ -116,6 +113,7 @@
                             <a href="#projects">
                                 <button class="linkButton" aria-label="Click to go to projects section.">
                                     <i class="fas fa-chevron-down linkIcon"></i>
+                                    <span class="sr-only">An icon indicating a chevron pointing down.</span>
                                 </button>
                             </a>
                             <div class="line"></div>
@@ -124,54 +122,84 @@
                     </div>
                     <div class="skillsIconsContainer">
                         <div class="skillsIconContainer">
-                            <i class="fab fa-html5" aria-label="An icon indicating the HTML5 logo."></i>
+                            <i class="fab fa-html5"></i>
+                            <span class="sr-only">An icon indicating the HTML5 logo.</span>
                             <p>HTML</p>
                         </div>
                         <div class="skillsIconContainer">
-                            <i class="fab fa-css3-alt" aria-label="An icon indicating the CSS3 logo."></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <span class="sr-only">An icon indicating the CSS3 logo.</span>
                             <p>CSS</p>
                         </div>
                         <div class="skillsIconContainer">
-                            <i class="fab fa-sass" aria-label="An icon indicating the SASS logo."></i>
+                            <i class="fab fa-sass"></i>
+                            <span class="sr-only">An icon indicating the SASS logo.</span>
                             <p>SASS</p>
                         </div>
                         <div class="skillsIconContainer">
-                            <i class="fas fa-dollar-sign"
-                                aria-label="An icon indicating a dollar sign, used to represent jQuery."></i>
+                            <i class="fas fa-dollar-sign"></i>
+                            <span class="sr-only">An dollar sign icon indicating jQuery.</span>
                             <p>jQuery</p>
                         </div>
                         <div class="skillsIconContainer">
-                            <i class="fab fa-js" aria-label="An icon indicating the javaScript logo."></i>
+                            <i class="fab fa-js"></i>
+                            <span class="sr-only">An icon indicating the JavsScript logo.</span>
                             <p>JavaScript</p>
                         </div>
                         <div class="skillsIconContainer">
-                            <i class="fab fa-react" aria-label="An icon indicating the React.js logo."></i>
+                            <i class="fab fa-react"></i>
+                            <span class="sr-only">An icon indicating the React.js logo.</span>
                             <p>React</p>
                         </div>
                         <div class="skillsIconContainer">
-                            <i class="fab fa-git-alt" aria-label="An icon indicating the git logo."></i>
+                            <i class="fab fa-git-alt"></i>
+                            <span class="sr-only">An icon indicating a code branch, used to represent git.</span>
                             <p>Git</p>
                         </div>
                         <div class="skillsIconContainer">
-                            <i class="fas fa-database"
-                                aria-label="An icon indicating a database, serves as firebase logo. "></i>
+                            <i class="fab fa-github"></i>
+                            <span class="sr-only">An icon indicating the Github logo.</span>
+                            <p>Github</p>
+                        </div>
+                        <div class="skillsIconContainer">
+                            <i class="fas fa-database"></i>
+                            <span class="sr-only">An icon indicating a database, used to represent firebase.</span>
                             <p>Firebase</p>
                         </div>
                         <div class="skillsIconContainer">
-                            <i class="fas fa-handshake" aria-label="An icon indicating a handshake."></i>
+                            <i class="fas fa-handshake"></i>
+                            <span class="sr-only">An icon indicating two people shaking hands.</span>
                             <p>Pair Programming</p>
                         </div>
                         <div class="skillsIconContainer">
                             <i class="fas fa-universal-access"></i>
+                            <span class="sr-only">An icon indicating universal access, used to represent accessible design.</span>
                             <p>Accessible Design</p>
                         </div>
                         <div class="skillsIconContainer">
                             <i class="fas fa-users"></i>
+                            <span class="sr-only">An icon indicating a group of people.</span>
                             <p>Teamwork</p>
                         </div>
                         <div class="skillsIconContainer">
                             <i class="fas fa-server"></i>
-                            <p>REST Apis</p>
+                            <span class="sr-only">An icon indicating a web server used to represent REST APIs.</span>
+                            <p>RESTful APIs</p>
+                        </div>
+                        <div class="skillsIconContainer">
+                            <i class="fab fa-npm"></i>   
+                            <span class="sr-only">An icon indicating the NPM logo.</span>
+                            <p>NPM</p>
+                        </div>
+                        <div class="skillsIconContainer">
+                            <i class="fas fa-book"></i>
+                            <span class="sr-only">An icon indicating a book, used to represents JavaScript animation libraries.</span>
+                            <p>Animation Libraries</p>
+                        </div>
+                        <div class="skillsIconContainer">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span class="sr-only">An icon indicating a mobile phone, used to represent responsive design.</span>
+                            <p>Responsive Design</p>
                         </div>
                     </div>
                 </div>
@@ -197,10 +225,12 @@
                         <p class="projectStack">This project was built with: HTML5, CSS3, jQuery, and Howler.js.</p>
                         <div class="projectLinks">
                             <a href="https://github.com/justinv416/JS-Hero" class="sourceLink" target="blank" aria-label="Click to view github repo for this project.">
-                                <i class="fab fa-github" aria-label="Icon indicating the github logo."></i>
+                                <i class="fab fa-github"></i>
+                                <span class="sr-only">An icon indicating the github page of the repository.</span>
                             </a>
                             <a href="https://jshero.netlify.app" class="liveLink" target="blank" aria-label="Click to view the live site of this project.">
-                                <i class="fas fa-external-link-alt" aria-label="Icon indicating an external link to the live site."></i>
+                                <i class="fas fa-external-link-alt"></i>
+                                <span class="sr-only">An icon indicating an external link to the live site.</span>
                             </a>
                         </div>
                     </div>
@@ -208,8 +238,10 @@
                         <p class="step"><span class="stepNumber">1</span> of <span class="maxStep">6</span></p>
                         <div class="line"></div>
                         <div class="projectSliderControls">
-                            <i class="fas fa-chevron-left" aria-label="Icon indicating a left chevron."></i>
-                            <i class="fas fa-chevron-right" aria-label="Icon indicating a right chevron."></i>
+                            <i class="fas fa-chevron-left"></i>
+                            <span class="sr-only">An icon indicating a left chevron, click to display previous project.</span>
+                            <i class="fas fa-chevron-right"></i>
+                            <span class="sr-only">An icon indicating a right chevron, click to display next project.</span>
                         </div>
                     </div>
                 </div>
@@ -229,6 +261,7 @@
                         <a href="mailto:justinvien.developer@gmail.com">
                             <button class="linkButton" aria-label="Click to open your email client.">
                                 <i class="fas fa-envelope linkIcon" aria-label="Icon indicating a email envelope."></i>
+                                <span class="sr-only">Go to Justin Vien's github profile.</span>
                             </button>
                         </a>
                     </div>
@@ -237,7 +270,8 @@
                         <p>Click on the Linkedin button below to send me a message on linkedin (will open a link to my linkedin profile in a new tab).</p>
                         <a href="https://www.linkedin.com/in/justin-vien-48116bb9/" target="blank">
                            <button class="linkButton" aria-label="Click to go to Justin Vien's Linkedin profile.">
-                                <i class="fab fa-linkedin linkIcon" aria-label="Icon indicating the linkedin logo."></i>
+                                <i class="fab fa-linkedin linkIcon"></i>
+                                <span class="sr-only">Go to Justin Vien's linkedin profile.</span>
                            </button>
                         </a>
                     </div>
@@ -253,22 +287,24 @@
                 <h2>JV</h2>
             </div>
             <ul>
-                <li><a href="index.html">Home.</a></li>
-                <li><a href="#about">About.</a></li>
-                <li><a href="#projects">Projects.</a></li>
-                <li><a href="#contact">Contact.</a></li>
+                <li><a href="index.html" aria-label="Click to go to home section.">Home.</a></li>
+                <li><a href="#about" aria-label="Click to go to about section.">About.</a></li>
+                <li><a href="#projects" aria-label="Click to go projects section.">Projects.</a></li>
+                <li><a href="#contact" aria-label="Click to go contact section.">Contact.</a></li>
             </ul>
             <p>&copy; 2022 Justin Vien</p>
-            <a href="#header" class="btt">Back to top</a>
+            <a href="#header" class="btt" aria-label="Click to go back to the top of the page.">Back to top</a>
             <ul class="socialLinks">
                 <li>
                     <a href="https://www.linkedin.com/in/justin-vien-48116bb9/" target="blank" aria-label="Click to go to Justin Vien's linkedin profile.">
-                        <i class="fab fa-linkedin" aria-label="Icon indicating the linkedin logo."></i>
+                        <i class="fab fa-linkedin"></i>
+                        <span class="sr-only">Go to Justin Vien's linkedin profile.</span>
                     </a>
                 </li>
                 <li>
                     <a href="https://github.com/justinv416" aria-label="Click to got to Justin Vien's github profile">
-                        <i class="fab fa-github" aria-label="Icon indicating the github logo."></i>
+                        <i class="fab fa-github"></i>
+                        <span class="sr-only">Go to Justin Vien's github profile.</span>
                     </a>
                 </li>
             </ul>
