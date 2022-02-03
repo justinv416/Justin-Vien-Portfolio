@@ -6,6 +6,15 @@ const app = {}
     reveal: true
 });
 
+app.splitTextAnimate = () => anime({
+    targets: '.reveal .aboutMeHeading',
+  translateY: [100, 0],
+  direction: 'alternate',
+  loop: 0,
+  delay: anime.stagger(40),
+  easing: 'cubicBezier(.71,-0.77,.43,1.67)',
+})
+
 //Anime.js animation timeline
 app.titleTimeline = anime.timeline({
   targets: '.reveal',
@@ -31,8 +40,29 @@ app.titleTimeline.add({
     targets: '.linkToSection', 
     opacity: [0, 1],
     translateY: [20, 0],
-}, '-=2000')
+}, '-=2000');
 
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 1
+}
+
+const callback = (entries, observer) => {
+    entries.forEach((entry) => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('fadeIn');
+            observer.unobserve(entry.target)
+        }
+    })
+}
+const myObserver = new IntersectionObserver(callback, options)
+
+
+const aboutImage = document.querySelector('.aboutMeHeading')
+
+myObserver.observe(aboutImage)
 
 app.projects = [
     {
@@ -42,6 +72,7 @@ app.projects = [
                     and a respective take damage animation if the user gets the question wrong.
                     I designed the UI with inspiration from old final fantasy RPGs. `,
         image: "./assets/JS-Hero.webp",
+        video: "./assets/JS-Hero-Demo.webm",
         stack: "HTML5, CSS3, jQuery, vanilla JS(OOP), and Howler.js.",
         source: "https://github.com/justinv416/JS-Hero",
         liveLink: "https://jshero.netlify.app"
@@ -52,6 +83,7 @@ app.projects = [
                     random or search for artworks for inspiration or their viewing pleasure. This app features API loading animations, and an opening 
                     animation created with Green Sock Animation Plugin and pagination for the search results.`,
         image: "./assets/Art-Unlimited.webp",
+        video: "./assets/Art Unlimited-Demo.webm",
         stack: "HTML5, CSS3, jQuery, and GSAP",
         source: "https://github.com/justinv416/Art-Unlimited",
         liveLink: "https://artunlimited.netlify.app"
@@ -62,6 +94,7 @@ app.projects = [
                     This website utilizes The Movie Database API that allows users to search for movies from their database or
                     discover popular movies based on a selected year or genre.`,
         image: "./assets/Reel-Good-Films.webp",
+        video: "./assets/Reel Good Films-Demo.webm",
         stack: "HTML5, CSS3, Vanilla JS, and ES6.",
         source: "https://github.com/MarkAndJustin/ReelGoodFilms",
         liveLink: "https://reelgoodfilms.netlify.app/"
@@ -71,6 +104,7 @@ app.projects = [
         description: `Creative is a multi-page website converted from a PSD file. 
                     This website is fully responsive with mobile navigation, a fully functional image slider
                     on the home page, and  the ability to allow users to write comments on the blog page.`,
+        video: "./assets/Creative -Demo.webm",
         image: "./assets/Creative.webp",
         stack: "HTML5, SASS, CSS grid, BEM methodology, and Vanilla JS",
         source: "https://github.com/justinv416/Agency-Creative",
@@ -81,20 +115,11 @@ app.projects = [
         description: `Shoppable is a e-commerce site that allows users to shop for products. 
                     This project features a dedicated product page, the ability for users to add and remove items 
                     from a cart component.`,
+        video: "./assets/Shoppable-Demo.webm",
         image: "./assets/Shoppable.webp",            
         stack: "React, CSS3",
         source: "https://github.com/justinv416/JustinVien-ProjectThree",
         liveLink: "https://thebettershoppable.netlify.app/"
-    },
-    {
-        name: "Bite-Sized Travelling",
-        description: `Bite-Sized Travelling is a agency style group React project that allows users to create a trip. 
-                    On a separate page users can then search for a location or city and populate restaurants which they
-                    can then add to their itinerary. Users can also add notes on the restaurant and modify their trip by add new restaurants or deleting them. `,
-        image: "./assets/Bite-Sized-Traveling.webp",            
-        stack: "React, CSS3, Firebase",
-        source: "https://github.com/BiteSizedTravelling/Project4",
-        liveLink: "https://bite-sized-travel-project.netlify.app"
     },
 ];
 
@@ -108,11 +133,11 @@ app.displayProject = (page) => {
     document.querySelector('.sourceLink').href = app.projects[page].source;
     document.querySelector('.liveLink').href = app.projects[page].liveLink;
     document.querySelector('.stepNumber').textContent = page + 1;
+    document.querySelector('.projectVideo').src = app.projects[page].video;
 }
 
 //Controls for the image carousel.
 app.sliderControls = (page) => {
-    //Maybe use event.target to dry up code
     //Controls left arrow
     document.querySelector('.fa-chevron-left').addEventListener('click', () => {
         if(page <= 0 ){
