@@ -117,7 +117,6 @@ i {
     padding: 10px;
 }
 
-/* Decorative Lines */
 .linkToMedium, .linkToProjects {
     display: flex;
     justify-content: space-between;
@@ -173,10 +172,6 @@ nav a {
     display: none;
 }
 
-.invisible {
-    visibility: hidden;
-}
-
 .show {
     display: block;
 }
@@ -228,13 +223,6 @@ footer a:focus {
     height: 100%;
 }
 
-/* .linkToSection {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-} */
-
 .linkCaption {
     color: var(--color-heading);
 }
@@ -255,7 +243,7 @@ footer a:focus {
 }
 
 .aboutMeContainer {
-    width: 50%;
+    width:50%;
     background-color: var(--color-background-secondary);
     display: flex;
     align-items: center;
@@ -269,7 +257,7 @@ footer a:focus {
 
 .aboutMeContent, .skillsContent {
     background-color: var(--color-background-secondary);
-    width: 80%;
+    width: 100%;
     padding: 10%;
     line-height: 35px; 
 }
@@ -346,6 +334,11 @@ footer a:focus {
 
 .projectDescription {
     padding: 20px 0;
+}
+
+.bold {
+    color: var(--color-heading);
+    font-weight: 600;
 }
 
 .projectHeading {
@@ -535,10 +528,6 @@ footer ul li a {
         padding: 20px 0 0 0;
     }
 
-    .linkToMedium .line, .linkToProjects .line {
-        display: none;
-    }
-
     /* Navbar */
     nav {
         width: 100%;
@@ -654,11 +643,16 @@ footer ul li a {
 
     .projectLinks {
         padding: 20px 0;
+        display: flex;
         justify-content: space-between;
     }
 
     .projectDetails .projectsHeading {
         display: none;
+    }
+
+    .projectImageContainer .projectsHeading {
+        display: block;
     }
 
     .projectsHeading {
@@ -669,6 +663,10 @@ footer ul li a {
 
     .projectHeading {
         padding: 0;
+    }
+    
+    .projectDescription {
+        padding: 10px 0;
     }
 
     /* Contact Section */
@@ -723,7 +721,7 @@ footer ul li a {
     }
 
     .aboutImage {
-        width: 100%;
+        width: 75%;
     }
 
     .aboutMeContent p {
@@ -748,17 +746,17 @@ footer ul li a {
 
     .projectHeading {
         text-align: center;
-        padding-top: 30px;
+        padding-top: 10px;
     }
 
     .projectsHeading {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         text-align: center;
         padding: 20px 0;
     }
 
     .contact h3 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 }
 
@@ -771,6 +769,10 @@ footer ul li a {
     .mobileNav li {
         padding: 30px 0;
     }
+
+    .aboutImage {
+        width: 100%;
+    }
     
     .aboutMeContent h2 {
         text-align: center;
@@ -782,10 +784,6 @@ footer ul li a {
 
     .projectDetailsContainer {
         width: 100%;
-    }
-
-    .projects .line {
-        width: 30%;
     }
 
     .contactContent {
