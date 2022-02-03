@@ -12,7 +12,7 @@ const titleTimeline = anime.timeline({
   translateY: [100, 0],
   direction: 'alternate',
   loop: 0,
-  delay: anime.stagger(50),
+  delay: anime.stagger(40),
   easing: 'cubicBezier(.71,-0.77,.43,1.67)',
 });
 
@@ -31,33 +31,8 @@ titleTimeline.add({
     targets: '.linkToSection', 
     opacity: [0, 1],
     translateY: [20, 0],
-}, '-=2000').add({
-    targets: '.headerImage',
-    opacity: [0, 1],
-    duration: 1000
-}, '-=2000');
+}, '-=2000')
 
-let options = {
-    rootMargin: '0px',
-    threshold: 1.0
-}
-
-// const h2 = document.querySelectorAll('h2');
-
-// let observer = new IntersectionObserver(entries => {
-//     entries.forEach(entry => {
-//         h2[0].classList.add('splt');
-//         reveal()
-//     })
-// },
-//     {
-//         threshold: 1
-//     } 
-// )
-
-// observer.observe(h2[0])
-
-// console.log(h2)
 
 const projects = [
     {
@@ -66,7 +41,7 @@ const projects = [
                     Upon a correct answer users will see a attack animation indicating the enemy is defeated,
                     and a respective take damage animation if the user gets the question wrong.
                     I designed the UI with inspiration from old final fantasy RPGs. `,
-        image: "./assets/JS-Hero.png",
+        image: "./assets/JS-Hero.webp",
         stack: "This project was built with: HTML5, CSS3, jQuery, vanilla JS(OOP), and Howler.js.",
         source: "https://github.com/justinv416/JS-Hero",
         liveLink: "https://jshero.netlify.app"
@@ -76,7 +51,7 @@ const projects = [
         description: `A website that utilizes the Art Institute of Chicago's API which allows users to to generate 
                     random or search for artworks for inspiration or their viewing pleasure. This app features API loading animations, and an opening 
                     animation created with Green Sock Animation Plugin and pagination for the search results.`,
-        image: "./assets/Art-Unlimited.png",
+        image: "./assets/Art-Unlimited.webp",
         stack: "This project was built with: HTML5, CSS3, jQuery, and GSAP",
         source: "https://github.com/justinv416/Art-Unlimited",
         liveLink: "https://artunlimited.netlify.app"
@@ -86,7 +61,7 @@ const projects = [
         description: `Reel Good Films is a website is a pair-programming project that I built with Mark Duffy. 
                     This website utilizes The Movie Database API that allows users to search for movies from their database or
                     discover popular movies based on a selected year or genre.`,
-        image: "./assets/Reel-Good-Films.png",
+        image: "./assets/Reel-Good-Films.webp",
         stack: "This project was built with: HTML5, CSS3, Vanilla JS, and ES6.",
         source: "https://github.com/MarkAndJustin/ReelGoodFilms",
         liveLink: "https://reelgoodfilms.netlify.app/"
@@ -96,8 +71,8 @@ const projects = [
         description: `Creative is a multi-page website converted from a PSD file. 
                     This website is fully responsive with mobile navigation, a fully functional image slider
                     on the home page, and  the ability to allow users to write comments on the blog page.`,
-        image: "./assets/Creative.png",
-        stack: "This project was built with: HTML5, SASS, BEM methodology, Vanilla JS",
+        image: "./assets/Creative.webp",
+        stack: "This project was built with: HTML5, SASS, CSS grid, BEM methodology, and Vanilla JS",
         source: "https://github.com/justinv416/Agency-Creative",
         liveLink: "https://agency-creative.netlify.app/"
     },
@@ -106,7 +81,7 @@ const projects = [
         description: `Shoppable is a e-commerce site that allows users to shop for products. 
                     This project features a dedicated product page, the ability for users to add and remove items 
                     from a cart component.`,
-        image: "./assets/Shoppable.png",            
+        image: "./assets/Shoppable.webp",            
         stack: "This project was built with: React, CSS3",
         source: "https://github.com/justinv416/JustinVien-ProjectThree",
         liveLink: "https://thebettershoppable.netlify.app/"
@@ -116,7 +91,7 @@ const projects = [
         description: `Bite-Sized Travelling is a agency style group React project that allows users to create a trip. 
                     On a separate page users can then search for a location or city and populate restaurants which they
                     can then add to their itinerary. Users can also add notes on the restaurant and modify their trip by add new restaurants or deleting them. `,
-        image: "./assets/Bite-Sized-Traveling.png",            
+        image: "./assets/Bite-Sized-Traveling.webp",            
         stack: "This project was built with: React, CSS3, Firebase",
         source: "https://github.com/BiteSizedTravelling/Project4",
         liveLink: "https://bite-sized-travel-project.netlify.app"
@@ -167,26 +142,6 @@ const navControl = () => {
         document.querySelector('.mobileNav').classList.toggle('opened')
     })
 }
-
-// const navScrollPosition = () => {
-//     window.addEventListener('scroll', () => {
-//         if(this.scrollY > 0) {
-//             document.querySelector('nav').style.position= 'fixed';
-//         }
-//     })
-// } 
-
-//Changing the color of navbar if window is scrolled past initial position.
-// navApp.changeNavColor = function(){
-//     window.addEventListener('scroll', function(){
-//         const navigationMain = document.querySelector('.navigation');
-//         if(this.scrollY > 0) {
-//             navigationMain.classList.add('navigation__color');
-//         } else {
-//             navigationMain.classList.remove('navigation__color');
-//         };
-//     });
-// };
 
 const init = () => {
     // displayProject();
