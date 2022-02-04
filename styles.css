@@ -103,16 +103,6 @@ i {
 
 /* DESIGN ELEMENTS */
 
-.fadeIn {
-  opacity: 1;
-}
-
-.line {
-    background-color: var(--color-secondary);
-    height: 2px;
-    transition: width 0.3s;
-}
-
 /* Logo */
 .logo {
     /* background-color: violet; */
@@ -155,17 +145,14 @@ nav a {
     position: absolute;
     z-index: 1;
     width: 100%;
+    height: 75%;
+    justify-content: space-evenly;
     text-transform: uppercase;
     left: 0;
 }
 
 .mobileNav li {
-    padding: 30px 0;
     font-size: 1.2rem;
-}
-
-.mobileNav li:first-child {
-    padding-top: 0;
 }
 
 .fa-times {
@@ -260,10 +247,6 @@ footer a:focus {
     justify-content: center;
 }
 
-.aboutMeHeading {
-    transition: all 2s ;
-}
-
 .about .linkCaption {
     padding: 0;
     color: var(--color-heading);
@@ -273,6 +256,9 @@ footer a:focus {
     background-color: var(--color-background-secondary);
     width: 100%;
     padding: 10%;
+}
+
+.aboutMeContent p, .skillsContent p {
     line-height: 35px; 
 }
 
@@ -285,7 +271,7 @@ footer a:focus {
 }
 
 .aboutImage {
-    width: 500px;
+    width: 450px;
     height: 600px;
 }
 
@@ -368,15 +354,20 @@ footer a:focus {
     padding-right: 50px;
 }
 
-.projectImageContainer {
+.projectMediaContainer {
     width: 50%;
 }
 
-.projectImage {
+.projectMediaContainer p {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.projectImage, .projectVideo {
     width: 100%;
 }
 
-.projectImageContainer .projectsHeading {
+.projectMediaContainer .projectsHeading {
     display: none;
 }
 
@@ -439,7 +430,7 @@ footer a:focus {
 
 .emailLink, .linkedInLink {
     text-align: center;
-    margin-top: 30px;
+    padding: 30px 0;
 }
 
 /* Footer */
@@ -647,7 +638,7 @@ footer ul li a {
     }
 
     /* Projects Section */
-    .projectImageContainer {
+    .projectMediaContainer {
         width: 100%;
     }
 
@@ -666,7 +657,7 @@ footer ul li a {
         display: none;
     }
 
-    .projectImageContainer .projectsHeading {
+    .projectMediaContainer .projectsHeading {
         display: block;
     }
 
@@ -736,7 +727,7 @@ footer ul li a {
     }
 
     .aboutImage {
-        width: 75%;
+        width: 300px;
     }
 
     .aboutMeContent p {
@@ -781,12 +772,9 @@ footer ul li a {
         height: auto;
     }
 
-    .mobileNav li {
-        padding: 30px 0;
-    }
-
     .aboutImage {
-        width: 100%;
+        width: 230px;
+        height: 300px;
     }
     
     .aboutMeContent h2 {

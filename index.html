@@ -51,7 +51,7 @@
                     <p class="headerRole">Front End Web Developer</p>
                     <div class="linkToSection">
                         <a href="#about" title="About me">
-                            <button class="linkButton" aria-label="Click to go to about section.">
+                            <button class="linkButton headingButton" aria-label="Click to go to about section.">
                                 <i class="fas fa-chevron-down linkIcon"></i>
                                 <span class="sr-only">An icon of a chevron pointing down.</span>
                             </button>
@@ -202,12 +202,13 @@
 
         <section id="projects" class="projects">
             <div class="wrapper">
-                <div class="projectImageContainer">
+                <div class="projectMediaContainer">
                     <h2 class="projectsHeading">Projects</h2>
-                    <video class="projectImage projectVideo" controls muted>
+                    <video class="projectVideo" controls muted preload="none" poster="./assets/JS-Hero.webp">
                         <source src="./assets/JS-Hero-Demo.webm" type="video/mp4">
                         <img src="./assets/JS-Hero.webp" alt="A photo of the current project." class="projectImage">
                     </video>
+                    <p>Video preview</p>
                 </div>   
                 <div class="projectDetailsContainer">
                     <div class="projectDetails">
@@ -215,7 +216,7 @@
                         <h3 class="projectHeading">JS-Hero</h3>
                         <p class="projectDescription">
                             A quiz game that features a set of 14 javascript trivia questions.
-                            Upon a correct answer users will see a attack animation indicating the enemey is defeated,
+                            Upon a correct answer users will see a attack animation indicating the enemy is defeated,
                             and a respective take damage animation if the user gets the question wrong.
                             I designed the UI with inspiration from old final fantasy RPGs. 
                         </p>
@@ -233,7 +234,6 @@
                     </div>
                     <div class="projectsSliderContainer">
                         <p class="step"><span class="stepNumber">1</span> of <span class="maxStep">5</span></p>
-                        <div class="line"></div>
                         <div class="projectSliderControls">
                             <i class="fas fa-chevron-left"></i>
                             <span class="sr-only">An icon indicating a left chevron, click to display previous project.</span>

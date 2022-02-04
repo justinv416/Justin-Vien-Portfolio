@@ -6,6 +6,7 @@ const app = {}
     reveal: true
 });
 
+//Split text animation
 app.splitTextAnimate = () => anime({
     targets: '.reveal .aboutMeHeading',
   translateY: [100, 0],
@@ -40,29 +41,17 @@ app.titleTimeline.add({
     targets: '.linkToSection', 
     opacity: [0, 1],
     translateY: [20, 0],
-}, '-=2000');
+}, '-=2000')
 
-
-const options = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 1
-}
-
-const callback = (entries, observer) => {
-    entries.forEach((entry) => {
-        if(entry.isIntersecting) {
-            entry.target.classList.add('fadeIn');
-            observer.unobserve(entry.target)
-        }
-    })
-}
-const myObserver = new IntersectionObserver(callback, options)
-
-
-const aboutImage = document.querySelector('.aboutMeHeading')
-
-myObserver.observe(aboutImage)
+//Animation for heading button
+app.bounceAnimation = anime({
+    targets: '.headingButton',
+    translateY: 8,
+    duration: 100,
+    direction: 'alternate',
+    loop: true,
+    easing: 'spring(1, 100, 10, 0)'
+});
 
 app.projects = [
     {
@@ -80,8 +69,8 @@ app.projects = [
     {
         name: "Art Unlimited",
         description: `A website that utilizes the Art Institute of Chicago's API which allows users to to generate 
-                    random or search for artworks for inspiration or their viewing pleasure. This app features API loading animations, and an opening 
-                    animation created with Green Sock Animation Plugin and pagination for the search results.`,
+                    random or search for artworks for inspiration or their viewing pleasure. This app features API loading animations, an opening 
+                    animation created with Green Sock Animation Plugin, and pagination for the search results.`,
         image: "./assets/Art-Unlimited.webp",
         video: "./assets/Art Unlimited-Demo.webm",
         stack: "HTML5, CSS3, jQuery, and GSAP",
@@ -134,6 +123,7 @@ app.displayProject = (page) => {
     document.querySelector('.liveLink').href = app.projects[page].liveLink;
     document.querySelector('.stepNumber').textContent = page + 1;
     document.querySelector('.projectVideo').src = app.projects[page].video;
+    document.querySelector('.projectVideo').setAttribute('poster', app.projects[page].image);
 }
 
 //Controls for the image carousel.
