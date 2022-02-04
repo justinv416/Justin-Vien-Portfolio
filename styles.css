@@ -162,8 +162,7 @@ nav a {
 }
 
 .mobileNav li {
-    font-size: 1.2rem;
-    padding: 50px 0;
+    padding: 57px 0;
 }
 
 .fa-times {
@@ -284,6 +283,7 @@ footer a:focus {
 .aboutImage {
     width: 450px;
     height: 600px;
+    padding: 50px;
 }
 
 .aboutImage img {
@@ -294,7 +294,7 @@ footer a:focus {
 /* Skills Section */
 .skills {
     background-color: var(--color-background);
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .skillsContainer {
@@ -512,14 +512,19 @@ footer ul li a {
     }
 }
 
-
-@media (max-width: 1200px) {
-    /* Containers & sections */
+@media (max-width: 1300px) {
     .headerContainer, .about, .projects, .projects .wrapper, 
     .contact, .contact .wrapper {
         height: auto;
     }
 
+    .skillsIconContainer {
+        width: 150px;
+    }
+}
+
+
+@media (max-width: 1200px) {
     .projects .wrapper, .contact .wrapper, .skillsContainer {
         flex-direction: column;
     }
@@ -623,6 +628,7 @@ footer ul li a {
         width: 300px;
         height: 400px;
         margin: 50px 0;
+        padding: 0;
     }
 
     .aboutMeContent, .skillsContent {
@@ -631,15 +637,11 @@ footer ul li a {
 
     .aboutMeContent {
         width: 100%;
-        padding: 10%;
+        padding: 5%;
     }
 
     .aboutMeContent h2 {
         text-align: center;
-    }
-
-    .aboutMeContent p:nth-of-type(2) {
-        padding: 25px 0;
     }
 
     /* Skills section */
@@ -648,10 +650,13 @@ footer ul li a {
     }
 
     .skillsContent {
-        padding: 10%;
+        padding: 5%;
         width: 100%;
-        text-align: center;
         margin-top: 50px;
+    }
+
+    .skillsIconContainer {
+        padding-top: 50px;
     }
 
     /* Projects Section */
@@ -699,11 +704,11 @@ footer ul li a {
 
     .contactContent, .contactContentLinks {
         width: 100%;
-        text-align: center;
     }
 
     .contactContent h2 {
         padding: 50px 0;
+        text-align: center;
     }
 
     .contactContent p {
@@ -724,7 +729,11 @@ footer ul li a {
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
     }
 
     nav {
@@ -746,10 +755,6 @@ footer ul li a {
 
     .aboutImage {
         width: 300px;
-    }
-
-    .aboutMeContent p {
-        padding: 25px 0;
     }
 
     .skillsContent {
@@ -774,9 +779,13 @@ footer ul li a {
     }
 
     .projectsHeading {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         text-align: center;
-        padding: 20px 0;
+        padding: 50px 0;
+    }
+
+    .projectLinks i {
+        font-size: 1.5rem;
     }
 
     .contact h3 {

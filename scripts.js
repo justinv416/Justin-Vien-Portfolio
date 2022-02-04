@@ -109,7 +109,18 @@ app.projects = [
         image: "./assets/Shoppable.webp",            
         stack: "React, CSS3",
         source: "https://github.com/justinv416/JustinVien-ProjectThree",
-        liveLink: "https://thebettershoppable.netlify.app/"
+        liveLink: "https://shoppablecommerce.netlify.app/"
+    },
+    {
+        name: "Bite-Sized Travelling",
+        description: `Bite-Sized Travelling is a agency style group React project that allows users to create a trip. 
+                    On a separate page users can then search for a location or city and populate restaurants which they
+                    can then add to their itinerary. Users can also add notes on the restaurant and modify their trip by add new restaurants or deleting them. `,
+        video: "./assets/Bite-Sized Traveling-Demo.webm",
+        image: "./assets/Bite-Sized-Traveling.webp",            
+        stack: "This project was built with: React, CSS3, Firebase",
+        source: "https://github.com/BiteSizedTravelling/Project4",
+        liveLink: "https://bite-sized-travel-project.netlify.app"
     },
 ];
 
