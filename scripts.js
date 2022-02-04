@@ -1,4 +1,3 @@
-//Look into splt.js and intersection observer api for text animation and on scroll 
 const app = {}
 
 //Splt.js animation
@@ -30,11 +29,12 @@ app.titleTimeline.add({
     targets: '.navLinks',
     opacity: [0, 1],
     translateY: [20, 0],
+    delay: anime.stagger(100),
     easing: 'spring(1, 80, 10, 0)'
 }, '+=100').add({
     targets: '.headerRole',
     opacity: [0, 1],
-    translateY: [20, 0],
+    translateY: [30, 0],
     duration: 100,
     easing: 'spring(1, 80, 10, 0)'
 }, '-=1000').add({
@@ -53,6 +53,7 @@ app.bounceAnimation = anime({
     easing: 'spring(1, 100, 10, 0)'
 });
 
+//An array of objects contains all information about the respective project.
 app.projects = [
     {
         name: "JS-Hero",
@@ -112,8 +113,7 @@ app.projects = [
     },
 ];
 
-
-
+//Displays the project data on the page. 
 app.displayProject = (page) => {
     document.querySelector('.projectHeading').textContent = app.projects[page].name;
     document.querySelector('.projectDescription').textContent = app.projects[page].description;
@@ -149,6 +149,7 @@ app.sliderControls = (page) => {
     });
 }
 
+//Controls for mobile navigation.
 app.navControl = () => {
     document.querySelector('.mobileNavIcons').addEventListener('click', () => {
         //Change accompanying aria label as well
@@ -159,7 +160,6 @@ app.navControl = () => {
 }
 
 app.init = () => {
-    // displayProject();
     app.sliderControls(0)
     app.navControl();
 }

@@ -51,7 +51,7 @@ ul {
 
 nav {
     font-family: var(--font-body);
-    width: 40%;
+    width: 45%;
     z-index: 1;
 }
 
@@ -91,7 +91,7 @@ header {
 }
 
 /* Icons */
-i {
+i, svg {
     font-size: 2rem;
     transition: color 0.2s ease-in-out;
 }
@@ -105,7 +105,6 @@ i {
 
 /* Logo */
 .logo {
-    /* background-color: violet; */
     width: 3rem;
     border-left: 2px solid black;
     border-right: 2px solid black;
@@ -138,6 +137,19 @@ nav a {
     transition: color 0.3s ease-in-out;
 }
 
+.navLinks:nth-of-type(6) a {
+    color: var(--color-heading);
+    transition: all 0.2s ease-in-out;
+    padding: 10px;
+    outline: 2px solid var(--color-secondary);
+}
+
+.navLinks:nth-of-type(6) a:hover, 
+.navLinks:nth-of-type(6) a:focus {
+    background-color: var(--color-secondary);
+    color: var(--color-background-secondary);
+}
+
 .mobileNav {
     display: none;
     flex-direction: column;
@@ -145,14 +157,13 @@ nav a {
     position: absolute;
     z-index: 1;
     width: 100%;
-    height: 100%;
-    justify-content: space-evenly;
     text-transform: uppercase;
     left: 0;
 }
 
 .mobileNav li {
     font-size: 1.2rem;
+    padding: 50px 0;
 }
 
 .fa-times {
@@ -253,12 +264,12 @@ footer a:focus {
 }
 
 .aboutMeContent, .skillsContent {
-    background-color: var(--color-background-secondary);
+    background-color: var(--color-background);
     width: 100%;
     padding: 10%;
 }
 
-.aboutMeContent p, .skillsContent p {
+.aboutMeContent p, .skillsContent p, .contactContent p {
     line-height: 35px; 
 }
 
@@ -283,7 +294,6 @@ footer a:focus {
 /* Skills Section */
 .skills {
     background-color: var(--color-background);
-    /* height: 100vh; */
     padding-bottom: 100px;
 }
 
@@ -297,11 +307,10 @@ footer a:focus {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* padding: 5%; */
 }
 
 .skillsIconContainer {
-    padding: 3%;
+    padding: 20px 10px;
     text-align: center;
     width: 200px;
 }
@@ -411,6 +420,10 @@ footer a:focus {
 
 .contactContent {
     width: 50%;
+}
+
+.contactContent p {
+    width: 80%;
 }
 
 .contactContentLinks {
@@ -577,7 +590,7 @@ footer ul li a {
         right: 0;
         bottom: 0;
         left: 0;
-        padding: 20px;
+        padding: 50px 0;
     }
     
     h1 {
@@ -612,6 +625,10 @@ footer ul li a {
         margin: 50px 0;
     }
 
+    .aboutMeContent, .skillsContent {
+        background-color: var(--color-background-secondary);
+    }
+
     .aboutMeContent {
         width: 100%;
         padding: 10%;
@@ -621,8 +638,8 @@ footer ul li a {
         text-align: center;
     }
 
-    .aboutMeContent p {
-        padding: 50px 0;
+    .aboutMeContent p:nth-of-type(2) {
+        padding: 25px 0;
     }
 
     /* Skills section */
@@ -690,6 +707,7 @@ footer ul li a {
     }
 
     .contactContent p {
+        width: 100%;
         padding-bottom: 50px;
     }
 
