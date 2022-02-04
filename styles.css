@@ -51,7 +51,7 @@ ul {
 
 nav {
     font-family: var(--font-body);
-    width: 45%;
+    width: 50%;
     z-index: 1;
 }
 
@@ -110,10 +110,11 @@ i, svg {
     border-right: 2px solid black;
 }
 
-.logo h2 {
+.logo p {
     font-size: 1.5rem;
     font-weight: 400;
     padding: 10px;
+    color: var(--color-heading);
 }
 
 .linkToMedium, .linkToProjects {
@@ -205,7 +206,7 @@ footer a:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 3% 8%;
+    margin: 0 0 3% 6%;
 }
 
 .headerContainer button:hover + .hide {
@@ -462,6 +463,10 @@ footer .logo {
     margin: 0 auto;
 }
 
+footer .logo p {
+    color: var(--color-background-secondary);
+}
+
 footer ul:first-of-type {
     display: flex;
     justify-content: space-evenly;
@@ -530,7 +535,7 @@ footer ul li a {
     }
 
     /* Design elements */
-    .logo h2 {
+    .logo p {
         font-size: 1rem;
     }
 
@@ -751,6 +756,14 @@ footer ul li a {
     .headerContentContainer {
         width: 100%;
         position: static;
+    }
+
+    .aboutMeContent h2, .skillsContent h2 {
+        padding: 50px 0;
+    }
+
+    .aboutMeContent p:first-of-type, .skillsContent p:first-of-type {
+        padding: 0;
     }
 
     .aboutImage {

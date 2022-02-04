@@ -7,13 +7,13 @@ const app = {}
 
 //Split text animation
 app.splitTextAnimate = () => anime({
-    targets: '.reveal .aboutMeHeading',
+    // targets: '.reveal',
   translateY: [100, 0],
   direction: 'alternate',
   loop: 0,
   delay: anime.stagger(40),
   easing: 'cubicBezier(.71,-0.77,.43,1.67)',
-})
+});
 
 //Anime.js animation timeline
 app.titleTimeline = anime.timeline({
@@ -163,7 +163,6 @@ app.sliderControls = (page) => {
 //Controls for mobile navigation.
 app.navControl = () => {
     document.querySelector('.mobileNavIcons').addEventListener('click', () => {
-        //Change accompanying aria label as well
         let mobileNavIcon = document.querySelector('.fa-bars');
         mobileNavIcon.classList.toggle('fa-times');
         document.querySelector('.mobileNav').classList.toggle('opened')
