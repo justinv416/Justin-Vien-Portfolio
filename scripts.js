@@ -41,7 +41,7 @@ app.titleTimeline.add({
     targets: '.linkToSection', 
     opacity: [0, 1],
     translateY: [20, 0],
-}, '-=2000')
+}, '-=2000');
 
 //Animation for heading button
 app.bounceAnimation = anime({
@@ -135,7 +135,7 @@ app.displayProject = (page) => {
     document.querySelector('.stepNumber').textContent = page + 1;
     document.querySelector('.projectVideo').src = app.projects[page].video;
     document.querySelector('.projectVideo').setAttribute('poster', app.projects[page].image);
-}
+};
 
 //Controls for the image carousel.
 app.sliderControls = (page) => {
@@ -146,7 +146,7 @@ app.sliderControls = (page) => {
             page--;
         } else  {
             page--;
-        }
+        };
         app.displayProject(page);
     });
     //Controls right arrow. 
@@ -155,10 +155,10 @@ app.sliderControls = (page) => {
             page = 0;
         } else {
             page++;
-        }
+        };
         app.displayProject(page)
     });
-}
+};
 
 //Controls for mobile navigation.
 app.navControl = () => {
@@ -166,12 +166,12 @@ app.navControl = () => {
         let mobileNavIcon = document.querySelector('.fa-bars');
         mobileNavIcon.classList.toggle('fa-times');
         document.querySelector('.mobileNav').classList.toggle('opened')
-    })
-}
+    });
+};
 
 app.init = () => {
     app.sliderControls(0)
     app.navControl();
-}
+};
 
 app.init();
