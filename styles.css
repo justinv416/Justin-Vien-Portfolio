@@ -145,7 +145,7 @@ nav a {
     position: absolute;
     z-index: 1;
     width: 100%;
-    height: 75%;
+    height: 100%;
     justify-content: space-evenly;
     text-transform: uppercase;
     left: 0;
