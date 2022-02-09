@@ -104,7 +104,7 @@ app.projects = [
         name: "Shoppable",
         description: `Shoppable is a e-commerce site that allows users to shop for products. 
                     This project features a dedicated product page, the ability for users to add and remove items 
-                    from a cart component in which data is persisted across sessions through he integration of Google Firebase.`,
+                    from a cart component in which data is persisted across sessions through the integration of Google Firebase.`,
         video: "./assets/Shoppable-Demo.webm",
         image: "./assets/Shoppable.webp",            
         stack: "React, CSS3, and Firebase",
