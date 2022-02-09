@@ -104,10 +104,10 @@ app.projects = [
         name: "Shoppable",
         description: `Shoppable is a e-commerce site that allows users to shop for products. 
                     This project features a dedicated product page, the ability for users to add and remove items 
-                    from a cart component.`,
+                    from a cart component in which data is persisted across sessions through he integration of Google Firebase.`,
         video: "./assets/Shoppable-Demo.webm",
         image: "./assets/Shoppable.webp",            
-        stack: "React, CSS3",
+        stack: "React, CSS3, and Firebase",
         source: "https://github.com/justinv416/JustinVien-ProjectThree",
         liveLink: "https://shoppablecommerce.netlify.app/"
     },
