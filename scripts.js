@@ -118,7 +118,7 @@ app.projects = [
                     can then add to their itinerary. Users can also add notes on the restaurant and modify their trip by add new restaurants or deleting them. `,
         video: "./assets/Bite-Sized Traveling-Demo.webm",
         image: "./assets/Bite-Sized-Traveling.webp",            
-        stack: "This project was built with: React, CSS3, Firebase",
+        stack: "React, CSS3, Firebase",
         source: "https://github.com/BiteSizedTravelling/Project4",
         liveLink: "https://bite-sized-travel-project.netlify.app"
     },
