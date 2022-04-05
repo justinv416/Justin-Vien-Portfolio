@@ -56,6 +56,17 @@ app.bounceAnimation = anime({
 //An array of objects contains all information about the respective project.
 app.projects = [
     {
+        name: "Reel Good Films",
+        description: `  Reel Good Films is a website that utilizes the TMDB API to allow users to discover and search for popular movies.
+                            Users can watch a trailer for the given movie and add them to their watch list. Firebase authentication is also added
+                            as a feature. This project was originally a pair-programming project that I have updated to React.js `,
+        image: "./assets/Reel-Good-Films.webp",
+        video: "./assets/Reel Good Films-Demo.webm",
+        stack: "HTML5, CSS3, Vanilla JS, and ES6.",
+        source: "https://github.com/MarkAndJustin/ReelGoodFilmsV2",
+        liveLink: "https://reelgoodfilmsv2.netlify.app/"
+    },
+    {
         name: "JS-Hero",
         description: `A quiz game that features a set of 14 javascript trivia questions.
                     Upon a correct answer users will see a attack animation indicating the enemy is defeated,
@@ -77,17 +88,6 @@ app.projects = [
         stack: "HTML5, CSS3, jQuery, and GSAP",
         source: "https://github.com/justinv416/Art-Unlimited",
         liveLink: "https://artunlimited.netlify.app"
-    },
-    {
-        name: "Reel Good Films",
-        description: `Reel Good Films is a website is a pair-programming project that I built with Mark Duffy. 
-                    This website utilizes The Movie Database API that allows users to search for movies from their database or
-                    discover popular movies based on a selected year or genre.`,
-        image: "./assets/Reel-Good-Films.webp",
-        video: "./assets/Reel Good Films-Demo.webm",
-        stack: "HTML5, CSS3, Vanilla JS, and ES6.",
-        source: "https://github.com/MarkAndJustin/ReelGoodFilms",
-        liveLink: "https://reelgoodfilms.netlify.app/"
     },
     {
         name: "Creative",
