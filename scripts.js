@@ -62,7 +62,7 @@ app.projects = [
                             as a feature. This project was originally a pair-programming project that I have updated to React.js `,
         image: "./assets/Reel-Good-Films.webp",
         video: "./assets/Reel Good Films-Demo.webm",
-        stack: "HTML5, CSS3, Vanilla JS, and ES6.",
+        stack: "React, CSS Modules, Firebase",
         source: "https://github.com/MarkAndJustin/ReelGoodFilmsV2",
         liveLink: "https://reelgoodfilmsv2.netlify.app/"
     },
